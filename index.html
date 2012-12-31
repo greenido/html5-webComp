@@ -2150,6 +2150,136 @@ shadow.innerHTML = '<style>h2 { color: red;}' +
 </slide>
 
 
+<slide   >
+  
+    <hgroup>
+      <span>
+        
+        
+      </span>
+      <h2>Remember our host node</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><pre class="prettyprint" data-lang="html">
+&lt;div id="host">
+  &lt;h1>My Title&lt;/h1>
+  &lt;h2>My Subtitle&lt;/h2>
+  &lt;div>...other content...&lt;/div>
+&lt;/div>
+</pre>
+
+<p>that guy rendered as:</p>
+<pre class="prettyprint" data-lang="html">
+&lt;div id="host">
+  <span style="opacity:0.5">#shadow-root</span>
+    &lt;style>h2 {color: red;}&lt;/style>
+    &lt;h2>Yo, you got replaced!&lt;/h2>
+    &lt;div>by my awesome content&lt;/div>
+&lt;/div>
+</pre>
+
+<p>...everything was replaced when we attached the shadow DOM <label class="bad"></label></p></article>
+ 
+</slide>
+
+<slide id="insertion-points2"  >
+  
+    <hgroup>
+      <span>
+        
+        
+      </span>
+      <h2>Shadow DOM insertion points</h2>
+      <h3>funnels for host's children</h3>
+    </hgroup>
+    <article class="flexbox vcenter centered build"><div class="auto-fadein"></div></article>
+ 
+</slide>
+
+<slide id="shadow-dom-insertion-pts-example"  >
+  
+    <hgroup>
+      <span>
+        
+        
+      </span>
+      <h2>Shadow DOM insertion points</h2>
+      <h3>funnels for host's children</h3>
+    </hgroup>
+    <article class="smaller"><ul>
+<li><code>&lt;content&gt;</code> elements are insertion points.</li>
+<li><code>select</code> attribute uses CSS selectors to specify where children are funneled.</li>
+<li><code>content.getDistributedNodes()</code> returns list of element distributed in the insertion point.</li>
+</ul>
+<div class="columns-2">
+<pre class="prettyprint" data-lang="host">
+&lt;div id="host"&gt;
+  &lt;h1&gt;My Title&lt;/h1&gt;
+  &lt;h2&gt;My Subtitle&lt;/h2&gt;
+  &lt;div&gt;...other content...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint" data-lang="Shadow DOM" style="-webkit-column-break-before: always;">
+&lt;style>
+  h2 {color: red;}
+&lt;/style>
+&lt;hgroup>
+  <b>&lt;content select="h2">&lt;/content&gt;</b>
+  &lt;div&gt;You got enhanced&lt;/div&gt;
+  <b>&lt;content select="h1:first-child">&lt;/content&gt;</b>
+&lt;/hgroup>
+<b>&lt;content select="*">&lt;/content&gt;</b>
+</pre>
+</div>
+
+<div class="host">
+  <h1>My Title</h1>
+  <h2>My Subtitle</h2>
+  <div>...other content...</div>
+</div>
+
+<script>
+(function() {
+var shadow = document.querySelector('#shadow-dom-insertion-pts-example .host').createShadowRoot();
+shadow.innerHTML = '<style>\
+h2 { color: red;}\
+</style>\
+<hgroup>\
+  <content select="h2"></content>\
+  <div>You got enhanced</div>\
+  <content select="h1:first-child"></content>\
+</hgroup>\
+<content select="*"></content>';
+})();
+</script></article>
+ 
+</slide>
+
+  <slide class="nobackground funnyimage" style="background-image: url(images/insert-point-sun.png)">
+     Insertion Points
+      <article class="flexbox vcenter centered defintion">
+       
+        <p style="color: #F1D6D6;">allow us to define a declarative API</p>
+      </article>
+  </slide>
+
+<slide>
+  
+    <hgroup>
+      <span>
+        
+        
+      </span>
+      <h2></h2>
+      <h3></h3>
+    </hgroup>
+    <article class="flexbox vcenter centered"><h2 class="auto-fadein">Encapsulation / Boundaries / Re-usability</h2>
+
+<h3 class="auto-fadein">baked into the web platform...</h3></article>
+ 
+</slide>
+
 
         <!-- ### devtools -->
         <slide class="segue">
