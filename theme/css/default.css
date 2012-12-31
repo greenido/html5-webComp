@@ -236,21 +236,33 @@ opacity:1}slides>slide.current .auto-fadein{opacity:1}slides>slide.current .gdba
 -o-background-size:100% 100%;
 background-size:100% 100%}slides>slide.next{display:block;
 opacity:0;
-pointer-events:none}slides>slide.far-next{display:none}slides>slide.dark{background:#515151 !important}slides>slide:not(.nobackground):before{font-size:12pt;
-content:"ido-green.appspot.com \00a0\00a0\00a0 #html5";
-position:absolute;
-bottom:20px;
-left:60px;
+pointer-events:none
+}
 
- background:url("../../images/HTML5_Badge_128.png") 
- no-repeat 0 50%;
--webkit-background-size:30px 30px;
--moz-background-size:30px 30px;
--o-background-size:30px 30px;
-background-size:30px 30px;
-padding-left:40px;
-height:30px;
-line-height:1.9}slides>slide:not(.nobackground):after{font-size:12pt;
+slides>slide.far-next{
+  display:none
+  }
+slides>slide.dark{
+  background:#515151 !important
+  }
+slides>slide:not(.nobackground):before{
+  font-size:12pt;
+  content:"ido-green.appspot.com \00a0\00a0\00a0 #html5";
+  position:absolute;
+  bottom: 15px;
+  left: 25em;
+   background:url("../../images/HTML5_Badge_128.png") 
+   no-repeat 0 50%;
+  -webkit-background-size:30px 30px;
+  -moz-background-size:30px 30px;
+  -o-background-size:30px 30px;
+  background-size:30px 30px;
+  padding-left:40px;
+  height:30px;
+  line-height:1.9
+}
+
+slides>slide:not(.nobackground):after{font-size:12pt;
 content:attr(data-slide-num) "/" attr(data-total-slides);
 position:absolute;
 bottom:20px;
@@ -1988,4 +2000,12 @@ label.bad {
 }
 label.good {
 background-color: #00A86D;
+}
+
+.host {
+  border-top: 1px dashed darkGray;
+  border-bottom: 1px dashed darkGray;
+  padding-bottom: 15px;
+  position: relative;
+  bottom: 2em;
 }
