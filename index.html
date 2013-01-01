@@ -10,7 +10,7 @@ Date: Nov 2012
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  --> 
+  -->
   <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">
   -->
   <!--This one seems to work all the time, but really small on ipad-->
@@ -24,7 +24,6 @@ Date: Nov 2012
   <base target="_blank">
   <!-- This amazingness opens all links in a new tab. -->
   <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
-
   <script src="js/polyfills/components-polyfill.js"></script>
 </head>
 <body style="opacity: 0" class="weavebg">
@@ -46,315 +45,321 @@ Date: Nov 2012
 
     <slide class="title-slide segue nobackground">
       <aside class="gdbar">
-        <img src="images/chrome_logo.png">
-      </aside>
+        <img src="images/chrome_logo.png"></aside>
       <img src="images/HTML5_Badge_128.png" style="position: relative;left: 4em;top: 53px;"></h1>
 
-      <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
-      <hgroup class="auto-fadein">
-        <h1 data-config-title>
-          <!-- populated from slide_config.json --> </h1>
-        <h2 data-config-subtitle>
-          <!-- populated from slide_config.json --> </h2>
-        <p data-config-presenter>
-          <!-- populated from slide_config.json --> </p>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title>
+        <!-- populated from slide_config.json --> </h1>
+      <h2 data-config-subtitle>
+        <!-- populated from slide_config.json --> </h2>
+      <p data-config-presenter>
+        <!-- populated from slide_config.json --> </p>
       <p>
         <a href="http://gdg-il.appspot.com">GDG-IL.appspot.com</a>
       </p>
-      </hgroup>
-    </slide>
+    </hgroup>
+  </slide>
 
-    <slide>
-      <hgroup>
-        <h2>
-          Who <em>is</em>
-          this Guy?
-        </h2>
-      </hgroup>
-      <article id="who">
-        <span class="build">
-          <p class="avatar rounded"></p>
-        </span>
-        <p data-config-presenter-title></p>
-        <p data-config-presenter-company></p>
-        <p style="margin-top:2em;">
-          <a rel="author" data-config-gplus>
-            <img src="http://www.google.com/images/icons/ui/gprofile_button-44.png" width="44" height="44"></a>
-          +
-          <a rel="author" data-config-gplus>
-            <span data-config-presenter-name></span>
-          </a>
-        </p>
-        <p>
-          <a rel="author" style="margin-left:-8px;" data-config-twitter>
-            <img src="images/twitter_newbird_blue.png" width="58" height="58"></a>
-          <a rel="author" style="margin-left:-5px;" data-config-twitter></a>
-        </p>
-        <p>
-          <a rel="author" data-config-www></a>
-        </p>
-        <a href="https://developers.google.com/live/">GDL-IL (Google Developers Live)</a>
-      </article>
-    </slide>
-
-    <slide class="nobackground" data-body-class="cat">
-      <article class="flexbox vcenter">
-        <span>
-          <a href="http://active.tutsplus.com/articles/roundups/10-flash-things-you-can%E2%80%99t-do-with-html5/" style="border:none">
-            <img src="images/html_can_not_do_that.jpg"></a>
-        </span>
-        <div class="source">
-          <a href="http://www.flickr.com/photos/thefangmonster/490423135/" class="white">www.flickr.com/photos/thefangmonster/490423135/</a>
-        </div>
-      </article>
-    </slide>
-
-    <slide>
-      <hgroup>
-        <h2>Agenda</h2>
-      </hgroup>
-      <article class="flexbox vcenter auto-fadein" style="height:65%">
-        <ul class="build fade" style="font-size:150%;line-height:175%;">
-          <li class="fade">Defining the modern web app</li>
-          <li class="fade">HTML5 Power tools/APIs</li>
-          <li class="fade">Web Components</li>
-          <li class="fade">DevTools Tips</li>
-        </ul>
-      </article>
-    </slide>
-
-    <slide>
-      <div class="flexbox vcenter build" style="font-size:150%;line-height:175%;">
-        <div class="formula to-build">The Power Of HTML5</div>
-        <div class="formula to-build">+</div>
-        <div class="formula to-build" style="border-bottom: 1px solid black;padding-bottom: 25px;">Native &amp; Desktop Experiences</div>
-        <div class="formula to-build" style="margin-top:40px;"> <strong>Modern Web Apps</strong>
-        </div>
-      </div>
-    </slide>
-
-    <slide>
-      <h2>Modern web app</h2>
-      <div class="low-list flexbox hcenter">
-        <ul class="build fade">
-          <li class="to-build">Self Contained & Functional</li>
-          <li class="to-build">"Offline First"</li>
-          <li class="to-build">Client Side Architecture</li>
-          <li class="to-build">Device Aware</li>
-          <li class="to-build">60fps</li>
-
-        </ul>
-        <img src="images/gr8-web-apps.png" alt="examples for great web apps that leverage html5 apis" />
-      </div>
-    </slide>
-
-    <slide>
-      <h2>Client Side Frameworks</h2>
-      <div class="low-list flexbox hcenter">
-        <ul style="width: 55%;">
-          <li>
-            <a href="http://angularjs.org/">Angular.js</a>
-            - AngularJS lets you extend HTML vocabulary for 
-              your application
-          </li>
-          <li>
-            <a href="http://documentcloud.github.com/backbone/">Backbone.js</a>
-            - Gives structure to web applications by 
-                providing models with binding, collections and views
-          </li>
-
-          <li>
-            <a href="http://emberjs.com/">Ember.js</a>
-            - Don't waste time making trivial choices
-          </li>
-        </ul>
-        <a href="http://addyosmani.github.com/todomvc/">
-          <img src="images/todomvc-icon.png" alt="todomvc project" />
+  <slide>
+    <hgroup>
+      <h2>
+        Who <em>is</em>
+        this Guy?
+      </h2>
+    </hgroup>
+    <article id="who">
+      <span class="build">
+        <p class="avatar rounded"></p>
+      </span>
+      <p data-config-presenter-title></p>
+      <p data-config-presenter-company></p>
+      <p style="margin-top:2em;">
+        <a rel="author" data-config-gplus>
+          <img src="http://www.google.com/images/icons/ui/gprofile_button-44.png" width="44" height="44"></a>
+        +
+        <a rel="author" data-config-gplus>
+          <span data-config-presenter-name></span>
         </a>
-      </div>
-
-      <p>
-        ...And on the server side:<br/>Google Cloud End Points:
-        <a href="http://bit.ly/gce-web">bit.ly/gce-web - Full Tutorial</a>
-        <br/>
-        <a href="hhttp://endpoints-proto-datastore.appspot.com/">Endpoints Proto Datastore API</a>
       </p>
-    </slide>
+      <p>
+        <a rel="author" style="margin-left:-8px;" data-config-twitter>
+          <img src="images/twitter_newbird_blue.png" width="58" height="58"></a>
+        <a rel="author" style="margin-left:-5px;" data-config-twitter></a>
+      </p>
+      <p>
+        <a rel="author" data-config-www></a>
+      </p>
+      <a href="https://developers.google.com/live/">GDL-IL (Google Developers Live)</a>
+    </article>
+  </slide>
 
-    <slide>
-      <h2>Offline - Why?</h2>
-      <div class="low-list flexbox hcenter">
-        <ul class="build" >
-          <li class="to-build">Better performance</li>
-          <li class="to-build">Airplane, road trip, deserted island</li>
-          <li class="to-build">Flaky connections (e.g. cafes, car)</li>
-          <li class="to-build">
-            Consolidates the concept of permanent app
-            <br/>
-            you will have always available
-          </li>
-        </ul>
-        <img src="images/offline-road.png" alt="offline on the road" />
+  <slide class="nobackground" data-body-class="cat">
+    <article class="flexbox vcenter">
+      <span>
+        <a href="http://active.tutsplus.com/articles/roundups/10-flash-things-you-can%E2%80%99t-do-with-html5/" style="border:none">
+          <img src="images/html_can_not_do_that.jpg"></a>
+      </span>
+      <div class="source">
+        <a href="http://www.flickr.com/photos/thefangmonster/490423135/" class="white">www.flickr.com/photos/thefangmonster/490423135/</a>
       </div>
-    </slide>
+    </article>
+  </slide>
 
-    <slide>
-      <h2>Offline - How?</h2>
-      <div class="low-list flexbox hcenter">
-        <ul class="build">
-          <li class="to-build">Storing assets: AppCache</li>
-          <li class="to-build">Storing data: localStorage, <a href="http://greenido.wordpress.com/2012/10/10/indexeddb-webcast-in-gdl-il/">IndexedDB</a>, File API.</li>
-          <li class="to-build">
-            Offline first:
-            <ul>
-              <li>Pretend that there's no internet connection</li>
-              <li>
-                Implement a sync layer that works only when 
+  <slide>
+    <hgroup>
+      <h2>Agenda</h2>
+    </hgroup>
+    <article class="flexbox vcenter auto-fadein" style="height:65%">
+      <ul class="build fade" style="font-size:150%;line-height:175%;">
+        <li class="fade">Defining the modern web app</li>
+        <li class="fade">HTML5 Power tools/APIs</li>
+        <li class="fade">Web Components</li>
+        <li class="fade">DevTools Tips</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <div class="flexbox vcenter build" style="font-size:150%;line-height:175%;">
+      <div class="formula to-build">The Power Of HTML5</div>
+      <div class="formula to-build">+</div>
+      <div class="formula to-build" style="border-bottom: 1px solid black;padding-bottom: 25px;">Native &amp; Desktop Experiences</div>
+      <div class="formula to-build" style="margin-top:40px;"> <strong>Modern Web Apps</strong>
+      </div>
+    </div>
+  </slide>
+
+  <slide>
+    <h2>Modern web app</h2>
+    <div class="low-list flexbox hcenter">
+      <ul class="build fade">
+        <li class="to-build">Self Contained & Functional</li>
+        <li class="to-build">"Offline First"</li>
+        <li class="to-build">Client Side Architecture</li>
+        <li class="to-build">Device Aware</li>
+        <li class="to-build">60fps</li>
+
+      </ul>
+      <img src="images/gr8-web-apps.png" alt="examples for great web apps that leverage html5 apis" />
+    </div>
+  </slide>
+
+  <slide>
+    <h2>Client Side Frameworks</h2>
+    <div class="low-list flexbox hcenter">
+      <ul style="width: 55%;">
+        <li>
+          <a href="http://angularjs.org/">Angular.js</a>
+          - AngularJS lets you extend HTML vocabulary for 
+              your application
+        </li>
+        <li>
+          <a href="http://documentcloud.github.com/backbone/">Backbone.js</a>
+          - Gives structure to web applications by 
+                providing models with binding, collections and views
+        </li>
+
+        <li>
+          <a href="http://emberjs.com/">Ember.js</a>
+          - Don't waste time making trivial choices
+        </li>
+      </ul>
+      <a href="http://addyosmani.github.com/todomvc/">
+        <img src="images/todomvc-icon.png" alt="todomvc project" />
+      </a>
+    </div>
+
+    <p>
+      ...And on the server side:
+      <br/>
+      Google Cloud End Points:
+      <a href="http://bit.ly/gce-web">bit.ly/gce-web - Full Tutorial</a>
+      <br/>
+      <a href="hhttp://endpoints-proto-datastore.appspot.com/">Endpoints Proto Datastore API</a>
+    </p>
+  </slide>
+
+  <slide>
+    <h2>Offline - Why?</h2>
+    <div class="low-list flexbox hcenter">
+      <ul class="build" >
+        <li class="to-build">Better performance</li>
+        <li class="to-build">Airplane, road trip, deserted island</li>
+        <li class="to-build">Flaky connections (e.g. cafes, car)</li>
+        <li class="to-build">
+          Consolidates the concept of permanent app
+          <br/>
+          you will have always available
+        </li>
+      </ul>
+      <img src="images/offline-road.png" alt="offline on the road" />
+    </div>
+  </slide>
+
+  <slide>
+    <h2>Offline - How?</h2>
+    <div class="low-list flexbox hcenter">
+      <ul class="build">
+        <li class="to-build">Storing assets: AppCache</li>
+        <li class="to-build">
+          Storing data: localStorage,
+          <a href="http://greenido.wordpress.com/2012/10/10/indexeddb-webcast-in-gdl-il/">IndexedDB</a>
+          , File API.
+        </li>
+        <li class="to-build">
+          Offline first:
+          <ul>
+            <li>Pretend that there's no internet connection</li>
+            <li>
+              Implement a sync layer that works only when 
                   online.
-              </li>
-            </ul>
-          </li>
-          <li class="to-build">
-            <pre>navigator.onLine & window.(ononline|onoffline)</pre>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="to-build">
+          <pre>navigator.onLine & window.(ononline|onoffline)</pre>
+        </li>
+      </ul>
 
-        <img src="images/offline-road2.png" alt="offline on the road" />
+      <img src="images/offline-road2.png" alt="offline on the road" />
 
-      </div>
-    </slide>
+    </div>
+  </slide>
 
-    <slide>
+  <slide>
+    <hgroup></hgroup>
+    <article class="flexbox vcenter auto-fadein" style="height:65%">
+      <h2 class="black rotate-h2">HTML5 Cool APIs</h2>
+      <img src="images/HTML5_Badge_128.png" style="margin-top:4em"/>
+    </article>
+  </slide>
+
+  <slide class="can nobackground">
+    <article class="flexbox vcenter">
       <hgroup>
-      </hgroup>
-      <article class="flexbox vcenter auto-fadein" style="height:65%">
-        <h2 class="black rotate-h2">HTML5 Cool APIs</h2>
-        <img src="images/HTML5_Badge_128.png" style="margin-top:4em"/>
-      </article>
-    </slide>
-
-    <slide class="can nobackground">
-      <article class="flexbox vcenter">
-        <hgroup>
-          <h2 class="white auto-fadein">CSS For Web Apps</h2>
-          <span class="build">
-            <h1 class="stamp">Confirmed</h1>
-          </span>
-        </hgroup>
-      </article>
-    </slide>
-
-    <slide>
-      <hgroup>
-        <h2>Floats, Tables, &amp; Positioning... Balagan!</h2>
-      </hgroup>
-      <article>
-        <ul>
-          <li>Floats stack horizontally to allow simple placement.</li>
-          <li>Tables lack repeatability and semantic meaning.</li>
-          <li>
-            Using absolute positioning is difficult. Makes adaptive display hard.
-          </li>
-          <li>
-            CSS3 specifications address layout cases with regions, exclusions, grid and
-            <span class="underline">flexible box</span>
-            .
-          </li>
-        </ul>
-      </article>
-    </slide>
-
-    <slide>
-      <hgroup>
-        <h2>2012: The Rise of CSS for Web Apps</h2>
-      </hgroup>
-      <article>
-        <ul>
-          <li>
-            <a href="http://dev.w3.org/csswg/css3-regions/">CSS Regions Module Level 3</a>
-          </li>
-          <li>
-            <a href="http://dev.w3.org/csswg/css3-flexbox/">CSS Flexible Box Layout Module</a>
-            ( da new one )
-          </li>
-          <li>
-            <a href="http://dev.w3.org/csswg/css3-grid-align/">CSS Grid Layout</a>
-          </li>
-          <li>
-            <a href="http://dev.w3.org/csswg/css3-hierarchies/">CSS Hierarchies</a>
-          </li>
-          <li>
-            <a href="https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html">CSS Filter Effects 1.0</a>
-          </li>
-          <li>
-            <a href="http://dl.dropbox.com/u/11894343/web-animations/web-animations.html">Web Animations 1.0</a>
-          </li>
-          <li>
-            <a href="http://dev.w3.org/csswg/css-variables/">CSS Variables Module Level 1</a>
-          </li>
-        </ul>
-      </article>
-    </slide>
-
-    <slide hidden>
-      <hgroup>
-        <span>
-          <a href="http://webk.it/62048" class="bug" title="Bug link"></a>
-          <a href="http://dev.w3.org/csswg/css3-flexbox/" class="spec" title="Spec link"></a>
+        <h2 class="white auto-fadein">CSS For Web Apps</h2>
+        <span class="build">
+          <h1 class="stamp">Confirmed</h1>
         </span>
-        <h2>CSS Flexible Box Module</h2>
-        <h3>Layout for web apps</h3>
       </hgroup>
-      <article>
-        <ul class="build fade">
-          <li>Box model optimized for user interface design</li>
-          <li>
-            Children can "flex" their sizes: fill unused space / shrink to avoid overflow
-          </li>
-          <li>
-            Source-ordering independence: children can be laid out in any direction
-          </li>
-          <li>
-            Enabled by
-            <code>display: <a data-tooltip-property="flex" class="bold"></a></code>
-            and
-            <code>display: <a data-tooltip-property="inline-flex" class="bold"></a></code>
-          </li>
-          <li>
-            Note: Replacing old flex box
-            <code>display: <a data-tooltip-property="box"></a></code>
-          </li>
-        </ul>
-        <p class="toppadding build">
-          <span>That's all great...</span>
-        </p>
-      </article>
-    </slide>
+    </article>
+  </slide>
 
-    <slide class="segue">
-      <article class="flexbox vcenter auto-fadein">
-        <h2 class="black">Why is flexbox so awesome?</h2>
-      </article>
-    </slide>
+  <slide>
+    <hgroup>
+      <h2>Floats, Tables, &amp; Positioning... Balagan!</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Floats stack horizontally to allow simple placement.</li>
+        <li>Tables lack repeatability and semantic meaning.</li>
+        <li>
+          Using absolute positioning is difficult. Makes adaptive display hard.
+        </li>
+        <li>
+          CSS3 specifications address layout cases with regions, exclusions, grid and
+          <span class="underline">flexible box</span>
+          .
+        </li>
+      </ul>
+    </article>
+  </slide>
 
-    <slide>
-      <hgroup>
-        <h2>Achieve That "Holy Grail" Layout!</h2>
-      </hgroup>
-      <article class="flexbox vcenter">
-        <img src="images/slides/flexbox-holygrail.svg"  style="width:500px;height:400px;" alt="Standard layout" title="Standard layout">
-        <p><a href="http://demo.agektmr.com/flexbox/">Flexbox Testing Page</a></p>
-      </article>
+  <slide>
+    <hgroup>
+      <h2>2012: The Rise of CSS for Web Apps</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>
+          <a href="http://dev.w3.org/csswg/css3-regions/">CSS Regions Module Level 3</a>
+        </li>
+        <li>
+          <a href="http://dev.w3.org/csswg/css3-flexbox/">CSS Flexible Box Layout Module</a>
+          ( da new one )
+        </li>
+        <li>
+          <a href="http://dev.w3.org/csswg/css3-grid-align/">CSS Grid Layout</a>
+        </li>
+        <li>
+          <a href="http://dev.w3.org/csswg/css3-hierarchies/">CSS Hierarchies</a>
+        </li>
+        <li>
+          <a href="https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html">CSS Filter Effects 1.0</a>
+        </li>
+        <li>
+          <a href="http://dl.dropbox.com/u/11894343/web-animations/web-animations.html">Web Animations 1.0</a>
+        </li>
+        <li>
+          <a href="http://dev.w3.org/csswg/css-variables/">CSS Variables Module Level 1</a>
+        </li>
+      </ul>
+    </article>
+  </slide>
 
-    </slide>
+  <slide hidden>
+    <hgroup>
+      <span>
+        <a href="http://webk.it/62048" class="bug" title="Bug link"></a>
+        <a href="http://dev.w3.org/csswg/css3-flexbox/" class="spec" title="Spec link"></a>
+      </span>
+      <h2>CSS Flexible Box Module</h2>
+      <h3>Layout for web apps</h3>
+    </hgroup>
+    <article>
+      <ul class="build fade">
+        <li>Box model optimized for user interface design</li>
+        <li>
+          Children can "flex" their sizes: fill unused space / shrink to avoid overflow
+        </li>
+        <li>
+          Source-ordering independence: children can be laid out in any direction
+        </li>
+        <li>
+          Enabled by
+          <code>display: <a data-tooltip-property="flex" class="bold"></a></code>
+          and
+          <code>display: <a data-tooltip-property="inline-flex" class="bold"></a></code>
+        </li>
+        <li>
+          Note: Replacing old flex box
+          <code>display: <a data-tooltip-property="box"></a></code>
+        </li>
+      </ul>
+      <p class="toppadding build">
+        <span>That's all great...</span>
+      </p>
+    </article>
+  </slide>
 
-    <slide>
-      <hgroup>
-        <h2>Alignment</h2>
-        <h3>Vertically centered content is easy peasy!</h3>
-      </hgroup>
-      <article class="flexbox-example" id="flexbox-ex2">
-        <pre class="prettyprint" data-lang="css">
+  <slide class="segue">
+    <article class="flexbox vcenter auto-fadein">
+      <h2 class="black">Why is flexbox so awesome?</h2>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Achieve That "Holy Grail" Layout!</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/slides/flexbox-holygrail.svg"  style="width:500px;height:400px;" alt="Standard layout" title="Standard layout">
+      <p>
+        <a href="http://demo.agektmr.com/flexbox/">Flexbox Testing Page</a>
+      </p>
+    </article>
+
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Alignment</h2>
+      <h3>Vertically centered content is easy peasy!</h3>
+    </hgroup>
+    <article class="flexbox-example" id="flexbox-ex2">
+      <pre class="prettyprint" data-lang="css">
 .box {
   display: <a data-tooltip-property="flex" class="bold"></a>;
   <a data-tooltip-property="justify-content" class="bold"></a>: <select id="justify-content">
@@ -373,29 +378,29 @@ Date: Nov 2012
    </select>;
  }
 </pre>
-        <section class="box">
-          <div>A</div>
-          <div>B</div>
-          <div>C</div>
-        </section>
-      </article>
-    </slide>
+      <section class="box">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </section>
+    </article>
+  </slide>
 
-    <slide>
-      <hgroup>
-        <h2>Ordering &amp; Orientation</h2>
-        <h3>Order independent from source</h3>
-      </hgroup>
-      <article class="flexbox-example smaller" id="flexbox-ex4">
-        <ul>
-          <li>
-            Content is laid out from lowest to highest numbered ordinal group.
-          </li>
-          <li>
-            Items with the same order group are laid out per source document.
-          </li>
-        </ul>
-        <pre class="prettyprint" data-lang="css">
+  <slide>
+    <hgroup>
+      <h2>Ordering &amp; Orientation</h2>
+      <h3>Order independent from source</h3>
+    </hgroup>
+    <article class="flexbox-example smaller" id="flexbox-ex4">
+      <ul>
+        <li>
+          Content is laid out from lowest to highest numbered ordinal group.
+        </li>
+        <li>
+          Items with the same order group are laid out per source document.
+        </li>
+      </ul>
+      <pre class="prettyprint" data-lang="css">
 .box {
   <a data-tooltip-property="flex-direction" class="bold"></a>: <select id="flexDirection">
       <option selected>row</option>
@@ -408,57 +413,57 @@ Date: Nov 2012
   <a data-tooltip-property="order" class="bold"></a>: <input id="order" type="number" placeholder="0">;
 }
 </pre>
-        <section class="box">
-          <div>A</div>
-          <div>B</div>
-          <div>C</div>
-        </section>
-      </article>
-    </slide>
+      <section class="box">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </section>
+    </article>
+  </slide>
 
-    <slide hidden>
-      <hgroup>
-        <h2>Optimized For UI Design!</h2>
-      </hgroup>
-      <article>
-        <p>
-          Example: distribute toolbar icons evenly as device width changes:
-        </p>
-        <p class="centered">
-          <img src="images/slides/flexbox-tools.svg" alt="Typical toolbar" title="Typical toolbar"></p>
-      </article>
-    </slide>
+  <slide hidden>
+    <hgroup>
+      <h2>Optimized For UI Design!</h2>
+    </hgroup>
+    <article>
+      <p>
+        Example: distribute toolbar icons evenly as device width changes:
+      </p>
+      <p class="centered">
+        <img src="images/slides/flexbox-tools.svg" alt="Typical toolbar" title="Typical toolbar"></p>
+    </article>
+  </slide>
 
-    <slide>
-      <hgroup>
-        <h2>Same Height Columns!</h2>
-      </hgroup>
-      <article id="flexbox-bad">
-        <div class="rounded">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius tortor ut sem volutpat eu tincidunt ligula feugiat. Pellentesque sollicitudin turpis egestas lorem tincidunt ultricies in at metus. Fusce nec nibh justo.
-        </div>
-        <div class="rounded">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        <div class="rounded">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius tortor ut sem volutpat eu tincidunt ligula feugiat.
-        </div>
-      </article>
-    </slide>
+  <slide>
+    <hgroup>
+      <h2>Same Height Columns!</h2>
+    </hgroup>
+    <article id="flexbox-bad">
+      <div class="rounded">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius tortor ut sem volutpat eu tincidunt ligula feugiat. Pellentesque sollicitudin turpis egestas lorem tincidunt ultricies in at metus. Fusce nec nibh justo.
+      </div>
+      <div class="rounded">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      <div class="rounded">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius tortor ut sem volutpat eu tincidunt ligula feugiat.
+      </div>
+    </article>
+  </slide>
 
-    <slide>
-      <hgroup>
-        <h2>Flexibility</h2>
-      </hgroup>
-      <article class="flexbox-example smaller" id="flexbox-ex3">
-        <ul>
-          <li>
-            Flexbox items alter their width/height to fill available space.
-          </li>
-          <li>
-            Items grow/shrink proportional to their positive/negative flexibility
-          </li>
-          <li>3rd argument is preferred size</li>
-        </ul>
-        <pre class="prettyprint" data-lang="css">
+  <slide>
+    <hgroup>
+      <h2>Flexibility</h2>
+    </hgroup>
+    <article class="flexbox-example smaller" id="flexbox-ex3">
+      <ul>
+        <li>
+          Flexbox items alter their width/height to fill available space.
+        </li>
+        <li>
+          Items grow/shrink proportional to their positive/negative flexibility
+        </li>
+        <li>3rd argument is preferred size</li>
+      </ul>
+      <pre class="prettyprint" data-lang="css">
 .box > * {
   <a data-tooltip-property="flex" class="bold"></a>: 1 0 0px;
 }
@@ -466,117 +471,117 @@ Date: Nov 2012
   <a data-tooltip-property="flex" class="bold"></a>: <input type="number" value="1" placeholder="1"> <input type="number" placeholder="0"> <input type="text" placeholder="0">px;
 }
 </pre>
-        <section class="box">
-          <div>A</div>
-          <div>B</div>
-          <div>C</div>
-        </section>
-      </article>
-    </slide>
-
-    <slide class="fill nobackground" data-body-class="blueprint">
-      <hgroup>
-        <h2 class="white">Demo: Holy Grail Layout</h2>
-      </hgroup>
-      <article>
-        <!--<a href="http://jsbin.com/emedub/37/edit" class="demo">Demo</a>
-      -->
-      <a href="http://html5-demos.appspot.com/static/css/flexbox/index.html" class="previewframe">
-        <iframe data-src="http://html5-demos.appspot.com/static/css/flexbox/index.html"></iframe>
-      </a>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Browser Support</h2>
-      <h3>CSS Flexbox ( da new one )</h3>
-    </hgroup>
-    <article class="flexbox vcenter" style="height:65%">
-      <div class="browser-support">
-        <img src="images/browser_logos/safari_logo.png" class="supported">
-        <img src="images/chrome_logo.png" class="supported">
-        <img src="images/browser_logos/ff_logo.png">
-        <img src="images/browser_logos/opera_logo.png">
-        <img src="images/browser_logos/ie10_logo.png" class="supported"></div>
-    </article>
-  </slide>
-
-  <slide class="can nobackground">
-    <article class="flexbox vcenter">
-      <hgroup>
-        <h2 class="white auto-fadein">Dynamic CSS</h2>
-        <span class="build">
-          <h1 class="stamp">Confirmed</h1>
-        </span>
-      </hgroup>
-    </article>
-  </slide>
-
-  <slide hidden>
-    <aside class="note">
-      <section>
-        <p>
-          Support:
-          <code>-webkit-calc()</code>
-          ,
-          <code>-moz-calc()</code>
-          , IE9.
-        </p>
+      <section class="box">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
       </section>
-    </aside>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground" data-body-class="blueprint">
     <hgroup>
-      <span>
-        <a href="http://webk.it/16662" class="bug"></a>
-        <a href="http://www.w3.org/TR/css3-values/#calc" class="spec" title="Spec link" alt="Spec link"></a>
-      </span>
-      <h2>New CSS Functions</h2>
+      <h2 class="white">Demo: Holy Grail Layout</h2>
     </hgroup>
-    <article class="smaller">
-      <p>calc()</p>
-      <pre class="prettyprint" data-lang="css">
+    <article>
+      <!--<a href="http://jsbin.com/emedub/37/edit" class="demo">Demo</a>
+    -->
+    <a href="http://html5-demos.appspot.com/static/css/flexbox/index.html" class="previewframe">
+      <iframe data-src="http://html5-demos.appspot.com/static/css/flexbox/index.html"></iframe>
+    </a>
+  </article>
+</slide>
+
+<slide>
+  <hgroup>
+    <h2>Browser Support</h2>
+    <h3>CSS Flexbox ( da new one )</h3>
+  </hgroup>
+  <article class="flexbox vcenter" style="height:65%">
+    <div class="browser-support">
+      <img src="images/browser_logos/safari_logo.png" class="supported">
+      <img src="images/chrome_logo.png" class="supported">
+      <img src="images/browser_logos/ff_logo.png">
+      <img src="images/browser_logos/opera_logo.png">
+      <img src="images/browser_logos/ie10_logo.png" class="supported"></div>
+  </article>
+</slide>
+
+<slide class="can nobackground">
+  <article class="flexbox vcenter">
+    <hgroup>
+      <h2 class="white auto-fadein">Dynamic CSS</h2>
+      <span class="build">
+        <h1 class="stamp">Confirmed</h1>
+      </span>
+    </hgroup>
+  </article>
+</slide>
+
+<slide hidden>
+  <aside class="note">
+    <section>
+      <p>
+        Support:
+        <code>-webkit-calc()</code>
+        ,
+        <code>-moz-calc()</code>
+        , IE9.
+      </p>
+    </section>
+  </aside>
+  <hgroup>
+    <span>
+      <a href="http://webk.it/16662" class="bug"></a>
+      <a href="http://www.w3.org/TR/css3-values/#calc" class="spec" title="Spec link" alt="Spec link"></a>
+    </span>
+    <h2>New CSS Functions</h2>
+  </hgroup>
+  <article class="smaller">
+    <p>calc()</p>
+    <pre class="prettyprint" data-lang="css">
 width: <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(200px - 100);
 width: <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(2 * 50%);
 width: <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(200px / 2);
 color: hsl(<a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(120), <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(75%), 0.5);
 background-position: <a data-tooltip-property="calc" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(50% + 5px) center;
 </pre>
-      <p>min()</p>
-      <pre class="prettyprint" data-lang="css">
+    <p>min()</p>
+    <pre class="prettyprint" data-lang="css">
 width: <a data-tooltip-property="min" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(150px, 100px, 200px);
 width: <a data-tooltip-property="min" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(90px + 50px, 100px);
 width: <a data-tooltip-property="min" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(100px, 100%);  /* where 100% is 200px; */
 </pre>
-      <p>max()</p>
-      <pre class="prettyprint" data-lang="css">
+    <p>max()</p>
+    <pre class="prettyprint" data-lang="css">
 width: <a data-tooltip-property="max" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(150px, 100px, 200px);
 width: <a data-tooltip-property="max" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(200px - 50px, 100px);
 width: <a data-tooltip-property="max" data-tooltip-support='["webkit", "moz", "unprefixed"]' class="bold"></a>(100px, 100%);  /* where 100% is 200px; */
 </pre>
-    </article>
-  </slide>
+  </article>
+</slide>
 
-  <slide>
-    <aside class="note">
-      <section>
-        <p>
-          Support:
-          <code>-webkit-calc()</code>
-          ,
-          <code>-moz-calc()</code>
-          , IE9.
-        </p>
-      </section>
-    </aside>
-    <hgroup>
-      <span>
-        <a href="http://webk.it/16662" class="bug"></a>
-        <a href="http://www.w3.org/TR/css3-values/#calc" class="spec" title="Spec link" alt="Spec link"></a>
-      </span>
-      <h2>calc()</h2>
-    </hgroup>
-    <article id="flexbox-circle" class="columns-2">
-      <pre class="prettyprint" data-lang="css">
+<slide>
+  <aside class="note">
+    <section>
+      <p>
+        Support:
+        <code>-webkit-calc()</code>
+        ,
+        <code>-moz-calc()</code>
+        , IE9.
+      </p>
+    </section>
+  </aside>
+  <hgroup>
+    <span>
+      <a href="http://webk.it/16662" class="bug"></a>
+      <a href="http://www.w3.org/TR/css3-values/#calc" class="spec" title="Spec link" alt="Spec link"></a>
+    </span>
+    <h2>calc()</h2>
+  </hgroup>
+  <article id="flexbox-circle" class="columns-2">
+    <pre class="prettyprint" data-lang="css">
 .circle {
   width: 300px;
   height: 300px;
@@ -593,172 +598,172 @@ div:hover {
   border-radius: 0;
 }
 </pre>
-      <div class="circle">
+    <div class="circle">
+      <div>
         <div>
-          <div>
-            <div></div>
-          </div>
+          <div></div>
         </div>
       </div>
-    </article>
-  </slide>
+    </div>
+  </article>
+</slide>
 
-  <slide>
-    <hgroup>
-      <h2>Browser Support</h2>
-      <h3>CSS calc()</h3>
-    </hgroup>
-    <article class="flexbox vcenter" style="height:65%">
-      <div class="browser-support">
-        <img src="images/browser_logos/safari_logo.png" class="supported">
-        <img src="images/chrome_logo.png" class="supported">
-        <img src="images/browser_logos/ff_logo.png" class="supported">
-        <img src="images/browser_logos/opera_logo.png">
-        <img src="images/browser_logos/ie10_logo.png" class="supported"></div>
-    </article>
-  </slide>
+<slide>
+  <hgroup>
+    <h2>Browser Support</h2>
+    <h3>CSS calc()</h3>
+  </hgroup>
+  <article class="flexbox vcenter" style="height:65%">
+    <div class="browser-support">
+      <img src="images/browser_logos/safari_logo.png" class="supported">
+      <img src="images/chrome_logo.png" class="supported">
+      <img src="images/browser_logos/ff_logo.png" class="supported">
+      <img src="images/browser_logos/opera_logo.png">
+      <img src="images/browser_logos/ie10_logo.png" class="supported"></div>
+  </article>
+</slide>
 
-  <slide hidden>
-    <hgroup>
-      <span>
-        <a href="http://webk.it/52162" class="bug"></a>
-        <a href="http://dev.w3.org/csswg/css3-images/#cross-fade-function" class="spec" title="Spec link" alt="Spec link"></a>
-      </span>
-      <h2>CSS Functions ( cont. )</h2>
-    </hgroup>
-    <article>
-      <p>cross-fade()</p>
-      <pre class="prettyprint" data-lang="css">
+<slide hidden>
+  <hgroup>
+    <span>
+      <a href="http://webk.it/52162" class="bug"></a>
+      <a href="http://dev.w3.org/csswg/css3-images/#cross-fade-function" class="spec" title="Spec link" alt="Spec link"></a>
+    </span>
+    <h2>CSS Functions ( cont. )</h2>
+  </hgroup>
+  <article>
+    <p>cross-fade()</p>
+    <pre class="prettyprint" data-lang="css">
 background-image: <a data-tooltip-property="cross-fade" class="bold"></a>(url(first.png), url(second.png), 50%);
 @-webkit-keyframes fading {
   0% { background-image: <a data-tooltip-property="cross-fade" class="bold"></a>(url(first.png), url(second.png), 0%); }
   100% { background-image: <a data-tooltip-property="cross-fade" class="bold"></a>(url(first.png), url(second.png), 100%); }
 }
 </pre>
-      <p class="centered">
-        <a href="http://peter.sh/files/examples/cross-fading.html" class="demo">Demo</a>
-      </p>
-    </article>
-  </slide>
+    <p class="centered">
+      <a href="http://peter.sh/files/examples/cross-fading.html" class="demo">Demo</a>
+    </p>
+  </article>
+</slide>
 
-  <slide hidden>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>
-            Prefixed in WebKit nightly/Chrome Canary:
-            <code>-webkit-filter</code>
-            .
-          </li>
-        </ul>
-      </section>
-    </aside>
-    <hgroup>
-      <span>
-        <a href="http://webk.it/68469" class="bug" title="Bug link"></a>
-        <a href="https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html" class="spec" title="Spec link"></a>
-      </span>
-      <h2>CSS Filter Effects</h2>
-    </hgroup>
-    <article>
-      <p>Apply filter effects to any DOM element:</p>
-      <pre class="prettyprint" data-lang="css">
+<slide hidden>
+  <aside class="note">
+    <section>
+      <ul>
+        <li>
+          Prefixed in WebKit nightly/Chrome Canary:
+          <code>-webkit-filter</code>
+          .
+        </li>
+      </ul>
+    </section>
+  </aside>
+  <hgroup>
+    <span>
+      <a href="http://webk.it/68469" class="bug" title="Bug link"></a>
+      <a href="https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html" class="spec" title="Spec link"></a>
+    </span>
+    <h2>CSS Filter Effects</h2>
+  </hgroup>
+  <article>
+    <p>Apply filter effects to any DOM element:</p>
+    <pre class="prettyprint" data-lang="css">
 video, img {
   <a data-tooltip-property="filter" class="bold"></a>: grayscale(0.5) blur(10px);
 }
 </pre>
-      <ul>
-        <li>
-          Chrome needs
-          <code>--enable-accelerated</code>
-          flag for hardware accelerated content.
-        </li>
-        <li>
-          Good
-          <a href="http://drublic.de/blog/effects-for-the-web/">blog post</a>
-          .
-        </li>
-      </ul>
-      <p class="centered">
-        <a href="http://html5-demos.appspot.com/static/css/filters/index.html" class="demo">Demo</a>
-        <a href="http://lab.simurai.com/stars/" class="demo">Demo2</a>
-      </p>
-    </article>
-  </slide>
+    <ul>
+      <li>
+        Chrome needs
+        <code>--enable-accelerated</code>
+        flag for hardware accelerated content.
+      </li>
+      <li>
+        Good
+        <a href="http://drublic.de/blog/effects-for-the-web/">blog post</a>
+        .
+      </li>
+    </ul>
+    <p class="centered">
+      <a href="http://html5-demos.appspot.com/static/css/filters/index.html" class="demo">Demo</a>
+      <a href="http://lab.simurai.com/stars/" class="demo">Demo2</a>
+    </p>
+  </article>
+</slide>
 
-  <slide class="can nobackground" data-body-class="binding">
-    <article class="flexbox vcenter">
-      <hgroup>
-        <h2 class="white auto-fadein">Data binding</h2>
-        <span class="build">
-          <h1 class="stamp">Confirmed</h1>
-        </span>
-      </hgroup>
-      <div class="source">
-        <a href="http://www.flickr.com/photos/24946690@N03/4345556870/" class="white">www.flickr.com/photos/24946690@N03/4345556870/</a>
-      </div>
-    </article>
-  </slide>
-
-  <slide>
+<slide class="can nobackground" data-body-class="binding">
+  <article class="flexbox vcenter">
     <hgroup>
-      <h2>Old Hat for JS Frameworks</h2>
+      <h2 class="white auto-fadein">Data binding</h2>
+      <span class="build">
+        <h1 class="stamp">Confirmed</h1>
+      </span>
     </hgroup>
-    <article class="build">
-      <div>
-        <p>
-          Angular (
-          <a href="http://angularjs.org">angularjs.org</a>
-          ) example:
-        </p>
-        <pre class="prettyprint" data-lang="html">
+    <div class="source">
+      <a href="http://www.flickr.com/photos/24946690@N03/4345556870/" class="white">www.flickr.com/photos/24946690@N03/4345556870/</a>
+    </div>
+  </article>
+</slide>
+
+<slide>
+  <hgroup>
+    <h2>Old Hat for JS Frameworks</h2>
+  </hgroup>
+  <article class="build">
+    <div>
+      <p>
+        Angular (
+        <a href="http://angularjs.org">angularjs.org</a>
+        ) example:
+      </p>
+      <pre class="prettyprint" data-lang="html">
   &lt;div <b>ng-app</b> ng-init="val=25">
     Volume: &lt;input type="range" min="0" max="100" <b>ng-model="val"</b>>
     <b>{{val}}</b>/100
   &lt;/div>
 </pre>
-      </div>
-      <div ng-app ng-cloak ng-init="val=25" class="centered toppadding">
-        Volume:
-        <input type="range" min="0" max="100" ng-model="val">{{val}}/100</div>
-    </article >
-  </slide>
+    </div>
+    <div ng-app ng-cloak ng-init="val=25" class="centered toppadding">
+      Volume:
+      <input type="range" min="0" max="100" ng-model="val">{{val}}/100</div>
+  </article >
+</slide>
 
-  <slide>
-    <hgroup>
-      <h2>
-        One-way Data Binding:
-        <code>data-*</code>
-        Attributes
-      </h2>
-      <h3>"Poor man's data binding"</h3>
-    </hgroup>
-    <article>
-      <ul>
-        <li>Model: data attribute</li>
-        <li>
-          Use
-          <code>attr()</code>
-          to get the value(s)
-        </li>
-        <li>
-          View: render generated content to
-          <code>:before</code>
-          /
-          <code>:after</code>
-          pseudo elements
-        </li>
-        <li>Hook listeners that watch for changes.</li>
-      </ul>
-    </article>
-  </slide>
+<slide>
+  <hgroup>
+    <h2>
+      One-way Data Binding:
+      <code>data-*</code>
+      Attributes
+    </h2>
+    <h3>"Poor man's data binding"</h3>
+  </hgroup>
+  <article>
+    <ul>
+      <li>Model: data attribute</li>
+      <li>
+        Use
+        <code>attr()</code>
+        to get the value(s)
+      </li>
+      <li>
+        View: render generated content to
+        <code>:before</code>
+        /
+        <code>:after</code>
+        pseudo elements
+      </li>
+      <li>Hook listeners that watch for changes.</li>
+    </ul>
+  </article>
+</slide>
 
-  <slide id="data-binding-example">
-    <hgroup>
-      <h2>"Poor Man's Data Binding"</h2>
-    </hgroup>
-    <article>
-      <pre class="prettyprint" data-lang="html/js">
+<slide id="data-binding-example">
+  <hgroup>
+    <h2>"Poor Man's Data Binding"</h2>
+  </hgroup>
+  <article>
+    <pre class="prettyprint" data-lang="html/js">
 &lt;style>
 input::after {
   <b>content: attr(data-value) '/' attr(max);</b>
@@ -776,22 +781,22 @@ input.dataset.value = input.value; // Set an initial value.
 });</b>
 &lt;/script>
 </pre>
-      <div class="centered">
-        Volume:
-        <input type="range" min="0" max="100" value="25"></div>
-    </article>
-  </slide>
+    <div class="centered">
+      Volume:
+      <input type="range" min="0" max="100" value="25"></div>
+  </article>
+</slide>
 
-  <slide>
-    <hgroup>
-      <span>
-        <a href="http://webk.it/27247" class="bug" title="Bug link"></a>
-        <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-datalist-element" class="spec" title="Spec link"></a>
-      </span>
-      <h2>One-way Data Binding: &lt;datalist&gt;</h2>
-    </hgroup>
-    <article>
-      <pre class="prettyprint" data-lang="html">
+<slide>
+  <hgroup>
+    <span>
+      <a href="http://webk.it/27247" class="bug" title="Bug link"></a>
+      <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-datalist-element" class="spec" title="Spec link"></a>
+    </span>
+    <h2>One-way Data Binding: &lt;datalist&gt;</h2>
+  </hgroup>
+  <article>
+    <pre class="prettyprint" data-lang="html">
 Browsers: &lt;input <b>list="browsers"></b>
 &lt;<b>datalist</b> id="browsers">
   &lt;option value="Chrome">
@@ -801,87 +806,87 @@ Browsers: &lt;input <b>list="browsers"></b>
   &lt;option value="Safari">
 <b>&lt;/datalist></b>
 </pre>
-      <ul>
-        <li>
-          Specifies a list of pre-defined options for an &lt;input&gt; element.
-        </li>
-        <li>
-          <code>list</code>
-          attribute "binds" data list to an &lt;input&gt;
-        </li>
-        <li>Useful for "autocomplete" on &lt;input&gt; elements.</li>
-      </ul>
-      <p class="centered blue">
-        Browsers:
-        <input list="browsers">
-        <datalist id="browsers">
-          <option value="Chrome">
-            <option value="Internet Explorer">
-              <option value="Firefox">
-                <option value="Opera">
-                  <option value="Safari"></datalist>
-                </p>
-              </article>
-            </slide>
+    <ul>
+      <li>
+        Specifies a list of pre-defined options for an &lt;input&gt; element.
+      </li>
+      <li>
+        <code>list</code>
+        attribute "binds" data list to an &lt;input&gt;
+      </li>
+      <li>Useful for "autocomplete" on &lt;input&gt; elements.</li>
+    </ul>
+    <p class="centered blue">
+      Browsers:
+      <input list="browsers">
+      <datalist id="browsers">
+        <option value="Chrome">
+          <option value="Internet Explorer">
+            <option value="Firefox">
+              <option value="Opera">
+                <option value="Safari"></datalist>
+              </p>
+            </article>
+          </slide>
 
-            <slide>
+          <slide>
+            <hgroup>
+              <h2>Browser Support</h2>
+              <h3>
+                Data binding with
+                <code>data-*</code>
+                attrs /
+                <code>&lt;datalist&gt;</code>
+              </h3>
+            </hgroup>
+            <article class="flexbox vcenter" style="height:65%;">
+              <div class="browser-support">
+                <img src="images/browser_logos/safari_logo.png" class="supported">
+                <img src="images/chrome_logo.png" class="supported">
+                <img src="images/browser_logos/ff_logo.png" class="supported">
+                <img src="images/browser_logos/opera_logo.png" class="supported">
+                <img src="images/browser_logos/ie10_logo.png" class="supported"></div>
+            </article>
+          </slide>
+
+          <slide class="can nobackground">
+            <article class="flexbox vcenter">
               <hgroup>
-                <h2>Browser Support</h2>
-                <h3>
-                  Data binding with
-                  <code>data-*</code>
-                  attrs /
-                  <code>&lt;datalist&gt;</code>
-                </h3>
+                <h2 class="white auto-fadein">Multithreaded Programs</h2>
+                <span class="build">
+                  <h1 class="stamp">Confirmed</h1>
+                </span>
               </hgroup>
-              <article class="flexbox vcenter" style="height:65%;">
-                <div class="browser-support">
-                  <img src="images/browser_logos/safari_logo.png" class="supported">
-                  <img src="images/chrome_logo.png" class="supported">
-                  <img src="images/browser_logos/ff_logo.png" class="supported">
-                  <img src="images/browser_logos/opera_logo.png" class="supported">
-                  <img src="images/browser_logos/ie10_logo.png" class="supported"></div>
-              </article>
-            </slide>
+            </article>
+          </slide>
 
-            <slide class="can nobackground">
-              <article class="flexbox vcenter">
-                <hgroup>
-                  <h2 class="white auto-fadein">Multithreaded Programs</h2>
-                  <span class="build">
-                    <h1 class="stamp">Confirmed</h1>
-                  </span>
-                </hgroup>
-              </article>
-            </slide>
-
-            <slide>
-              <hgroup style="display:inline-block;">
-                <h2 class="build">
-                  I Got So Excited...
-                  <span>I Wrote a Book :)</span>
-                </h2>
-              </hgroup>
-              <article class="flexbox vcenter">
-                <a href="http://www.amazon.com/gp/product/1449322131/ref=as_li_ss_il?ie=UTF8&tag=mybuwa-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1449322131" 
+          <slide>
+            <hgroup style="display:inline-block;">
+              <h2 class="build">
+                I Got So Excited...
+                <span>I Wrote a Book :)</span>
+              </h2>
+            </hgroup>
+            <article class="flexbox vcenter">
+              <a href="http://www.amazon.com/gp/product/1449322131/ref=as_li_ss_il?ie=UTF8&tag=mybuwa-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1449322131" 
       style="border:none;">
-                  <img src="images/my_book_cover.jpg" alt="Web Workers: Multithreaded Programs in JavaScript." title="Web Workers: Multithreaded Programs in JavaScript" style="height:500px;"></a>
-              </article>
-            </slide>
+                <img src="images/my_book_cover.jpg" alt="Web Workers: Multithreaded Programs in JavaScript." title="Web Workers: Multithreaded Programs in JavaScript" style="height:500px;"></a>
+            </article>
+          </slide>
 
-            <slide>
-              <article>
-                <h2>Web Workers</h2>
-                <h4>index.html</h4>
-                <pre class="prettyprint" data-lang="html/js">
+          <slide>
+            <article>
+              <h2>Web Workers</h2>
+              <h4>index.html</h4>
+              <pre class="prettyprint" data-lang="html/js">
 function startWorker(settings) {
   var myWorker = new Worker('scripts/worker.js');
   myWorker.addEventListener("message", workerListener, false);
   myWorker.postMessage(settings);
 }          
        </pre>
-                <h4>Worker.js</h4>
-                <pre class="prettyprint" data-lang="js">
+              <h4>Worker.js</h4>
+              <pre class="prettyprint" data-lang="js">
 self.addEventListener('message', function(e) {
   doSomeWork();
 };
@@ -892,54 +897,58 @@ function handleWork() {
   postMessage(result);
 }
      </pre>
+            </article>
+          </slide>
+
+          <slide>
+            <h3>Web Worker - Debug</h3>
+            <article id="webworker-box">
+              <!-- class="flexbox vcenter"-->
+
+              <div>
+                <img src="http://greenido.files.wordpress.com/2011/11/debug-webworkers-on-chrome.png" alt="debug worker in chrome devtool"/>
+              </div>
+
+              <div>
+                <ul>
+                  <li>
+                    if (
+                    <a href="http://modernizr.com/">Modernizr</a>
+                    .webworkers)
+                  </li>
+                  <li>
+                    <a href="http://greenido.wordpress.com/2011/11/03/web-workers-part-3-out-of-3-shared-wrokers/">Shared Workers</a>
+                    - Shared web workers allow any number of scripts to communicate with a single worker
+                  </li>
+                  <li>
+                    <a href="http://greenido.github.com/Web-Workers-Examples-/">The book examples on github</a>
+                  </li>
+                </div>
+              </article>
+            </slide>
+
+            <slide class="can nobackground">
+              <article class="flexbox vcenter">
+                <hgroup>
+                  <h2 class="white auto-fadein">Access a Filesystem</h2>
+                  <span class="build">
+                    <h1 class="stamp">Confirmed</h1>
+                  </span>
+                </hgroup>
               </article>
             </slide>
 
             <slide>
-              <h3>Web Worker - Debug</h3>
-              <article id="webworker-box">
-                <!-- class="flexbox vcenter"-->
-
-                <div>
-                  <img src="http://greenido.files.wordpress.com/2011/11/debug-webworkers-on-chrome.png" alt="debug worker in chrome devtool"/>
-                </div>
-
-                <div>
-                  <ul>
-                    <li>if (<a href="http://modernizr.com/">Modernizr</a>.webworkers)</li>
-                    <li>
-                      <a href="http://greenido.wordpress.com/2011/11/03/web-workers-part-3-out-of-3-shared-wrokers/">Shared Workers</a>
-                      - Shared web workers allow any number of scripts to communicate with a single worker
-                    </li>
-                    <li>
-                      <a href="http://greenido.github.com/Web-Workers-Examples-/">The book examples on github</a>
-                    </li>
-                  </div>
-                </article>
-              </slide>
-
-              <slide class="can nobackground">
-                <article class="flexbox vcenter">
-                  <hgroup>
-                    <h2 class="white auto-fadein">Access a Filesystem</h2>
-                    <span class="build">
-                      <h1 class="stamp">Confirmed</h1>
-                    </span>
-                  </hgroup>
-                </article>
-              </slide>
-
-              <slide>
-                <hgroup>
-                  <span>
-                    <a href="http://dev.w3.org/2009/dap/file-system/file-dir-sys.html" class="spec" title="Spec link"></a>
-                  </span>
-                  <h2>HTML5 Filesystem API</h2>
-                  <h3>Persist data to files/folders</h3>
-                </hgroup>
-                <article>
-                  <p>Opening a filesystem:</p>
-                  <pre class="prettyprint" data-lang="js">
+              <hgroup>
+                <span>
+                  <a href="http://dev.w3.org/2009/dap/file-system/file-dir-sys.html" class="spec" title="Spec link"></a>
+                </span>
+                <h2>HTML5 Filesystem API</h2>
+                <h3>Persist data to files/folders</h3>
+              </hgroup>
+              <article>
+                <p>Opening a filesystem:</p>
+                <pre class="prettyprint" data-lang="js">
 window.<a data-tooltip-property="requestFileSystem" data-tooltip-support='["webkit"]' data-tooltip-js class="bold"></a>(
   TEMPORARY,        // persistent vs. temporary storage
   1024 * 1024,      // size (bytes) of needed space
@@ -947,60 +956,60 @@ window.<a data-tooltip-property="requestFileSystem" data-tooltip-support='["webk
   opt_errorHandler  // opt. error callback, denial of access
 );
 </pre>
-                  <ul class="build">
-                    <li>Security: sandboxed per origin</li>
-                    <li>
-                      Power: native apps can do files/folders,...web apps should too!
-                    </li>
-                    <li>Benefit: dynamically cache and manage assets.</li>
-                  </ul>
-                </article>
-              </slide>
+                <ul class="build">
+                  <li>Security: sandboxed per origin</li>
+                  <li>
+                    Power: native apps can do files/folders,...web apps should too!
+                  </li>
+                  <li>Benefit: dynamically cache and manage assets.</li>
+                </ul>
+              </article>
+            </slide>
 
-              <slide>
-                <hgroup>
-                  <h2>Using Local Assets</h2>
-                </hgroup>
-                <article>
-                  <ul>
-                    <li>
-                      Stored files/folders get their own (
-                      <code>filesystem:</code>
-                      ) URL:
-                    </li>
-                  </ul>
-                  <pre class="centered" style="font-size:25px;">
+            <slide>
+              <hgroup>
+                <h2>Using Local Assets</h2>
+              </hgroup>
+              <article>
+                <ul>
+                  <li>
+                    Stored files/folders get their own (
+                    <code>filesystem:</code>
+                    ) URL:
+                  </li>
+                </ul>
+                <pre class="centered" style="font-size:25px;">
 <b>filesystem:</b><b alt="Origin of the app" class="blue" data-tooltip="Origin of the app"><span class="property" style="color:inherit;">http://example.com</span></b>/<b alt="Type of storage used" class="red" data-tooltip="Type of storage used"><span class="property" style="color:inherit;">temporary</span></b>/<b alt="Path to the file/folder" class="green" data-tooltip="Path to the file/folder"><span class="property" style="color:inherit;">image.png</span></b>
 </pre>
-                  <ul>
-                    <li>Use for a src/href value:</li>
-                  </ul>
-                  <pre class="prettyprint" data-lang="js">
+                <ul>
+                  <li>Use for a src/href value:</li>
+                </ul>
+                <pre class="prettyprint" data-lang="js">
 var img = document.createElement('img');
 img.src = <b>fileEntry.toURL();</b>
 document.body.appendChild(img);
 </pre>
-                  <ul>
-                    <li>
-                      Get back to a
-                      <code>FileEntry</code>
-                      from its
-                      <code>filesystem:</code>
-                      URL:
-                    </li>
-                  </ul>
-                  <pre class="prettyprint" data-lang="js">
+                <ul>
+                  <li>
+                    Get back to a
+                    <code>FileEntry</code>
+                    from its
+                    <code>filesystem:</code>
+                    URL:
+                  </li>
+                </ul>
+                <pre class="prettyprint" data-lang="js">
 window.<a data-tooltip-property="resolveLocalFileSystemURL" data-tooltip-support='["webkit"]' data-tooltip-js class="bold"></a>(img.src, function(fileEntry) { ... });
 </pre>
-                </article>
-              </slide>
+              </article>
+            </slide>
 
-              <slide>
-                <hgroup>
-                  <h2>Lots of callbacks!</h2>
-                </hgroup>
-                <article class="">
-                  <pre class="prettyprint" data-lang="js">
+            <slide>
+              <hgroup>
+                <h2>Lots of callbacks!</h2>
+              </hgroup>
+              <article class="">
+                <pre class="prettyprint" data-lang="js">
 var xhr = new XMLHttpRequest();
 xhr.open('GET', '/path/to/image.png', true);
 xhr.responseType = 'arraybuffer';
@@ -1020,20 +1029,20 @@ xhr.onload = function(e) {
 
 xhr.send();
 </pre>
-                </article>
-              </slide>
+              </article>
+            </slide>
 
-              <slide>
-                <hgroup>
-                  <h2>
-                    filer.js (
-                    <a href="https://github.com/ebidel/filer.js">github.com/ebidel/filer.js</a>
-                    )
-                  </h2>
-                </hgroup>
-                <article>
-                  <p>Wrapper lib that implements common UNIX cmds (ls, cp, mv)</p>
-                  <pre class="prettyprint" data-lang="js">
+            <slide>
+              <hgroup>
+                <h2>
+                  filer.js (
+                  <a href="https://github.com/ebidel/filer.js">github.com/ebidel/filer.js</a>
+                  )
+                </h2>
+              </hgroup>
+              <article>
+                <p>Wrapper lib that implements common UNIX cmds (ls, cp, mv)</p>
+                <pre class="prettyprint" data-lang="js">
 <b>var filer = new Filer();</b>
 
 filer.<b>init</b>({persistent: false, size: 1024 * 1024}, function(fs) {...}, onError);
@@ -1049,21 +1058,20 @@ filer.<b>write</b>('styles.css', {data: b, type: b.type}, function(entry, writer
     ...
 }, onError);
 </pre>
-                </article>
-              </slide>
+              </article>
+            </slide>
 
-              <slide class="fill nobackground" data-body-class="blueprint">
-                <hgroup>
-                  <h2 class="white">Demo: Filesystem Playground</h2>
-                </hgroup>
-                <article style="margin-top:0;">
-                  <a href="http://html5-demos.appspot.com/static/filesystem/filer.js/demos/index.html" class="previewframe">
-                    <iframe data-src="http://html5-demos.appspot.com/static/filesystem/filer.js/demos/index.html" style="-webkit-transform: scale(0.75) translateX(-130px);width: 120%;height:600px;"></iframe>
-                  </a>
-                </article>
-              </slide>
+            <slide class="fill nobackground" data-body-class="blueprint">
+              <hgroup>
+                <h2 class="white">Demo: Filesystem Playground</h2>
+              </hgroup>
+              <article style="margin-top:0;">
+                <a href="http://html5-demos.appspot.com/static/filesystem/filer.js/demos/index.html" class="previewframe">
+                  <iframe data-src="http://html5-demos.appspot.com/static/filesystem/filer.js/demos/index.html" style="-webkit-transform: scale(0.75) translateX(-130px);width: 120%;height:600px;"></iframe>
+                </a>
+              </article>
+            </slide>
 
-              
             <slide class="segue">
               <article class="flexbox vcenter auto-fadein">
                 <h2 class="black" style="font-size:45px;">But kind Sir, this marvel is only in Chrome!</h2>
@@ -1073,67 +1081,64 @@ filer.<b>write</b>('styles.css', {data: b, type: b.type}, function(entry, writer
               </article>
             </slide>
 
-           
-          <slide>
-            <hgroup>
-              <h2>Browser Support</h2>
-              <h3>
-                HTML5 Filesystem API - thanks to
-                <a href="https://github.com/ebidel/idb.filesystem.js">idb.filesystem.js</a>
-                shim!
-              </h3>
-            </hgroup>
-            <article class="flexbox vcenter" style="height:65%">
-              <div class="browser-support">
-                <img src="images/browser_logos/safari_logo.png">
-                <img src="images/chrome_logo.png" class="supported">
-                <img src="images/browser_logos/ff_logo.png" class="supported">
-                <img src="images/browser_logos/opera_logo.png">
-                <img src="images/browser_logos/ie10_logo.png" class="supported"></div>
-            </article>
-          </slide>
-
-        
-          <slide class="can nobackground" data-body-class="rocket">
-            <article class="flexbox vcenter">
+            <slide>
               <hgroup>
-                <h2 class="white auto-fadein">Efficiently Transfer Data</h2>
-                <span class="build">
-                  <h1 class="stamp">Confirmed</h1>
-                </span>
+                <h2>Browser Support</h2>
+                <h3>
+                  HTML5 Filesystem API - thanks to
+                  <a href="https://github.com/ebidel/idb.filesystem.js">idb.filesystem.js</a>
+                  shim!
+                </h3>
               </hgroup>
-              <div class="source">
-                <a href="http://www.flickr.com/photos/hamillianactor/362021036/" class="white">www.flickr.com/photos/hamillianactor/362021036/</a>
-              </div>
-            </article>
-          </slide>
-               
+              <article class="flexbox vcenter" style="height:65%">
+                <div class="browser-support">
+                  <img src="images/browser_logos/safari_logo.png">
+                  <img src="images/chrome_logo.png" class="supported">
+                  <img src="images/browser_logos/ff_logo.png" class="supported">
+                  <img src="images/browser_logos/opera_logo.png">
+                  <img src="images/browser_logos/ie10_logo.png" class="supported"></div>
+              </article>
+            </slide>
 
-          <slide>
-            <aside class="note">
-              <section>
-                <ul>
-                  <li>Structured cloning support: Chrome 13, FF 5</li>
-                </ul>
-              </section>
-            </aside>
-            <hgroup>
-              <h2>
-                Evolution of
-                <code>postMessage()</code>
-              </h2>
-            </hgroup>
-            <article>
-              <p>
-                3. Complex types (
-                <code>File</code>
-                ,
-                <code>Blob</code>
-                ,
-                <code>ArrayBuffer</code>
-                ) via structured cloning
-              </p>
-              <pre class="prettyprint" data-lang="js">
+            <slide class="can nobackground" data-body-class="rocket">
+              <article class="flexbox vcenter">
+                <hgroup>
+                  <h2 class="white auto-fadein">Efficiently Transfer Data</h2>
+                  <span class="build">
+                    <h1 class="stamp">Confirmed</h1>
+                  </span>
+                </hgroup>
+                <div class="source">
+                  <a href="http://www.flickr.com/photos/hamillianactor/362021036/" class="white">www.flickr.com/photos/hamillianactor/362021036/</a>
+                </div>
+              </article>
+            </slide>
+
+            <slide>
+              <aside class="note">
+                <section>
+                  <ul>
+                    <li>Structured cloning support: Chrome 13, FF 5</li>
+                  </ul>
+                </section>
+              </aside>
+              <hgroup>
+                <h2>
+                  Evolution of
+                  <code>postMessage()</code>
+                </h2>
+              </hgroup>
+              <article>
+                <p>
+                  3. Complex types (
+                  <code>File</code>
+                  ,
+                  <code>Blob</code>
+                  ,
+                  <code>ArrayBuffer</code>
+                  ) via structured cloning
+                </p>
+                <pre class="prettyprint" data-lang="js">
 var data = [1, 2, 3, 4];
 
 // Blob() in Chrome 20, FF 13
@@ -1143,59 +1148,59 @@ var uint8Array = new Uint8Array(data);
 worker.postMessage(<b>uint8Array</b>);
 worker.postMessage(<b>uint8Array.buffer</b>);
 </pre>
-              <ul class="build">
-                <li>Problem: all of these methods are copies. Not efficient!</li>
-                <li>We can do better...</li>
-              </ul>
-            </article>
-          </slide>
-
-          <slide>
-            <aside class="note">
-              <section>
-                <ul>
-                  <li>Support: Chrome 17</li>
+                <ul class="build">
+                  <li>Problem: all of these methods are copies. Not efficient!</li>
+                  <li>We can do better...</li>
                 </ul>
-                <img src="images/transferables.jpg"></section>
-            </aside>
-            <hgroup>
-              <h2>Transferable Objects</h2>
-              <h3>a.k.a. workers that "don't suck"</h3>
-            </hgroup>
-            <article>
-              <p>
-                Same old friend, different semantics (note the vendor prefix):
-              </p>
-              <pre class="prettyprint" data-lang="js">
+              </article>
+            </slide>
+
+            <slide>
+              <aside class="note">
+                <section>
+                  <ul>
+                    <li>Support: Chrome 17</li>
+                  </ul>
+                  <img src="images/transferables.jpg"></section>
+              </aside>
+              <hgroup>
+                <h2>Transferable Objects</h2>
+                <h3>a.k.a. workers that "don't suck"</h3>
+              </hgroup>
+              <article>
+                <p>
+                  Same old friend, different semantics (note the vendor prefix):
+                </p>
+                <pre class="prettyprint" data-lang="js">
 worker.<a data-tooltip-property="postMessage" data-tooltip-support='["webkit"]' data-tooltip-js class="bold"></a>(arrayBuffer, [arrayBuffer]);
 window.<a data-tooltip-property="postMessage" data-tooltip-support='["webkit"]' data-tooltip-js class="bold"></a>(arrayBuffer, targetOrigin, [arrayBuffer]);
 </pre>
-              <ul class="build">
-                <li>
-                  Zero-copy
-                  <ul>
-                    <li>
-                      Ownership of data (
-                      <code>ArrayBuffer</code>
-                      ) is transferred to new context (e.g. worker/window). Source buffer becomes unavailable.
-                    </li>
-                    <li>
-                      <span class="underline">~50x faster</span>
-                      than structured cloning (Chrome 13/FF).
-                    </li>
-                  </ul>
-                </li>
-                <li>2nd argument is list of what to transfer.</li>
-              </ul>
-            </article>
-          </slide>
+                <ul class="build">
+                  <li>
+                    Zero-copy
+                    <ul>
+                      <li>
+                        Ownership of data (
+                        <code>ArrayBuffer</code>
+                        ) is transferred to new context (e.g. worker/window). Source buffer becomes unavailable.
+                      </li>
+                      <li>
+                        <span class="underline">~50x faster</span>
+                        than structured cloning (Chrome 13/FF).
+                      </li>
+                    </ul>
+                  </li>
+                  <li>2nd argument is list of what to transfer.</li>
+                </ul>
+              </article>
+            </slide>
 
-          <slide hidden>
-            <hgroup>
-              <h2>Examples</h2>
-            </hgroup>
-            <article>
-              <pre class="prettyprint" data-lang="js">
+            <slide hidden>
+              <hgroup>
+                <h2>Examples</h2>
+              </hgroup>
+              <article>
+                <pre class="prettyprint" data-lang="js">
 var uint8Array = new Uint8Array(1024 * 1024 * 32); // 32MB
 
 // Fill'r up!
@@ -1205,42 +1210,42 @@ for (var i = 0, len = uint8Array.length; i &lt; len; ++i) {
 
 worker.<a data-tooltip-property="postMessage" data-tooltip-support='["webkit"]' data-tooltip-js class="bold"></a>(uint8Array, [uint8Array.buffer]);
 </pre>
-              <p>Pass multiple buffers at once and/or additional data:</p>
-              <pre class="prettyprint" data-lang="js">
+                <p>Pass multiple buffers at once and/or additional data:</p>
+                <pre class="prettyprint" data-lang="js">
 worker.<a data-tooltip-property="postMessage" data-tooltip-support='["webkit"]' data-tooltip-js class="bold"></a>({
   view1: uInt8Array,
   buffer2: anotherBuffer,
   username: 'johndoe'
 }, [uInt8Array.buffer, anotherBuffer]);
 </pre>
-            </article>
-          </slide>
+              </article>
+            </slide>
 
-          <slide class="fill nobackground" data-body-class="blueprint">
-            <hgroup>
-              <h2 class="white">Demo: Transferable Objects</h2>
-            </hgroup>
-            <article>
-              <a href="http://html5-demos.appspot.com/static/workers/transferables/index.html" class="previewframe">
-                <iframe data-src="http://html5-demos.appspot.com/static/workers/transferables/index.html"></iframe>
-              </a>
-            </article>
-          </slide>
+            <slide class="fill nobackground" data-body-class="blueprint">
+              <hgroup>
+                <h2 class="white">Demo: Transferable Objects</h2>
+              </hgroup>
+              <article>
+                <a href="http://html5-demos.appspot.com/static/workers/transferables/index.html" class="previewframe">
+                  <iframe data-src="http://html5-demos.appspot.com/static/workers/transferables/index.html"></iframe>
+                </a>
+              </article>
+            </slide>
 
-          <slide>
-            <hgroup>
-              <h2>Feature Detection</h2>
-            </hgroup>
-            <article>
-              <ul>
-                <li>Feature detecting is a PITA b/c of false positives.</li>
-                <li>
-                  If transferred, buffer's
-                  <code>.byteLength</code>
-                  goes to zero.
-                </li>
-              </ul>
-              <pre class="prettyprint" data-lang="js">
+            <slide>
+              <hgroup>
+                <h2>Feature Detection</h2>
+              </hgroup>
+              <article>
+                <ul>
+                  <li>Feature detecting is a PITA b/c of false positives.</li>
+                  <li>
+                    If transferred, buffer's
+                    <code>.byteLength</code>
+                    goes to zero.
+                  </li>
+                </ul>
+                <pre class="prettyprint" data-lang="js">
 var ab = new ArrayBuffer(1);
 worker.<a data-tooltip-property="postMessage" data-tooltip-support='["webkit"]' data-tooltip-js class="bold"></a>(ab, [ab]);
 if (ab.byteLength) {
@@ -1250,108 +1255,108 @@ if (ab.byteLength) {
   // PITA = pain in the...
 }
 </pre>
-            </article>
-          </slide>
+              </article>
+            </slide>
 
-          <slide>
-            <hgroup>
-              <h2>Browser Support</h2>
-              <h3>Transferable Objects</h3>
-            </hgroup>
-            <article class="flexbox vcenter" style="height:65%">
-              <div class="browser-support">
-                <img src="images/browser_logos/safari_logo.png">
-                <img src="images/chrome_logo.png" class="supported">
-                <img src="images/browser_logos/ff_logo.png">
-                <img src="images/browser_logos/opera_logo.png">
-                <img src="images/browser_logos/ie10_logo.png"></div>
-            </article>
-          </slide>
-
-          <slide class="can nobackground" data-body-class="tools">
-            <article class="flexbox vcenter">
+            <slide>
               <hgroup>
-                <h2 class="white auto-fadein">Access Native Hardware</h2>
-                <span class="build">
-                  <h1 class="stamp">Confirmed</h1>
-                </span>
+                <h2>Browser Support</h2>
+                <h3>Transferable Objects</h3>
               </hgroup>
-              <div class="source">
-                <a href="http://www.flickr.com/photos/katerha/5746905652/" class="white">www.flickr.com/photos/katerha/5746905652/</a>
-              </div>
-            </article>
-          </slide>
+              <article class="flexbox vcenter" style="height:65%">
+                <div class="browser-support">
+                  <img src="images/browser_logos/safari_logo.png">
+                  <img src="images/chrome_logo.png" class="supported">
+                  <img src="images/browser_logos/ff_logo.png">
+                  <img src="images/browser_logos/opera_logo.png">
+                  <img src="images/browser_logos/ie10_logo.png"></div>
+              </article>
+            </slide>
 
-          <slide>
-            <hgroup>
-              <h2>"Device APIs"</h2>
-            </hgroup>
-            <article class="build">
-              <p>
-                Device APIs WG:
-                <a href="http://www.w3.org/2009/dap/">www.w3.org/2009/dap/</a>
-              </p>
-              <ul class="build">
-                <li>Geolocation API (Psst... support in DevTools)</li>
-                <li>Device Orientation API ( accelerometer in your DevTools)</li>
-                <li>WebGL ( GPU )</li>
-                <li>HTML5 Filesystem API ( sandboxed filesystem )</li>
-                <li>
-                  <code>navigator.onLine</code>
-                  /
-                  <code>navigator.connection</code>
-                  ( network connectivity )
-                </li>
-                <li>Battery API</li>
-                <li>Gamepad API</li>
-                <li>
-                  WebRTC ( voice &amp; video input ) / Web Audio API ( core audio )
-                </li>
-              </ul>
-            </article>
-          </slide>
+            <slide class="can nobackground" data-body-class="tools">
+              <article class="flexbox vcenter">
+                <hgroup>
+                  <h2 class="white auto-fadein">Access Native Hardware</h2>
+                  <span class="build">
+                    <h1 class="stamp">Confirmed</h1>
+                  </span>
+                </hgroup>
+                <div class="source">
+                  <a href="http://www.flickr.com/photos/katerha/5746905652/" class="white">www.flickr.com/photos/katerha/5746905652/</a>
+                </div>
+              </article>
+            </slide>
 
-          <slide>
-            <hgroup>
-              <h2>First Step to Speech Enabled Apps!</h2>
-            </hgroup>
-            <article class="flexbox vcenter">
-              <input id="speech-input-textbox" type="text" x-webkit-speech style="width:400px;height:50px;font-size:135%;">
-              <pre class="prettyprint centered toppadding" data-lang="html">
-&lt;input type="text" <b>x-webkit-speech</b>&gt; 
-</pre>
-            </article>
-          </slide>
-
-          <slide>
-            <aside class="note">
-              <section>
-                <ul>
+            <slide>
+              <hgroup>
+                <h2>"Device APIs"</h2>
+              </hgroup>
+              <article class="build">
+                <p>
+                  Device APIs WG:
+                  <a href="http://www.w3.org/2009/dap/">www.w3.org/2009/dap/</a>
+                </p>
+                <ul class="build">
+                  <li>Geolocation API (Psst... support in DevTools)</li>
+                  <li>Device Orientation API ( accelerometer in your DevTools)</li>
+                  <li>WebGL ( GPU )</li>
+                  <li>HTML5 Filesystem API ( sandboxed filesystem )</li>
                   <li>
-                    Prefixed as
-                    <code>navigator.webkitGetUserMedia()</code>
-                    in WebKit
+                    <code>navigator.onLine</code>
+                    /
+                    <code>navigator.connection</code>
+                    ( network connectivity )
                   </li>
+                  <li>Battery API</li>
+                  <li>Gamepad API</li>
                   <li>
-                    <code>window.URL</code>
-                    is prefixed as
-                    <code>window.webkitURL</code>
-                    in WebKit
-                  </li>
-                  <li>
-                    Needs
-                    <code>--enable-media-stream</code>
-                    flag in Chrome.
+                    WebRTC ( voice &amp; video input ) / Web Audio API ( core audio )
                   </li>
                 </ul>
-              </section>
-            </aside>
-            <hgroup>
-              <h2>Camera &amp; Microphone Access</h2>
-            </hgroup>
-            <article>
-              <p>Plugin-free acess to camera/microphone.</p>
-              <pre class="prettyprint" data-lang="js">
+              </article>
+            </slide>
+
+            <slide>
+              <hgroup>
+                <h2>First Step to Speech Enabled Apps!</h2>
+              </hgroup>
+              <article class="flexbox vcenter">
+                <input id="speech-input-textbox" type="text" x-webkit-speech style="width:400px;height:50px;font-size:135%;">
+                <pre class="prettyprint centered toppadding" data-lang="html">
+&lt;input type="text" <b>x-webkit-speech</b>&gt; 
+</pre>
+              </article>
+            </slide>
+
+            <slide>
+              <aside class="note">
+                <section>
+                  <ul>
+                    <li>
+                      Prefixed as
+                      <code>navigator.webkitGetUserMedia()</code>
+                      in WebKit
+                    </li>
+                    <li>
+                      <code>window.URL</code>
+                      is prefixed as
+                      <code>window.webkitURL</code>
+                      in WebKit
+                    </li>
+                    <li>
+                      Needs
+                      <code>--enable-media-stream</code>
+                      flag in Chrome.
+                    </li>
+                  </ul>
+                </section>
+              </aside>
+              <hgroup>
+                <h2>Camera &amp; Microphone Access</h2>
+              </hgroup>
+              <article>
+                <p>Plugin-free acess to camera/microphone.</p>
+                <pre class="prettyprint" data-lang="js">
 <b>navigator.<a data-tooltip-property="getUserMedia" data-tooltip-support='["unprefixed", "webkit", "moz"]' data-tooltip-js></a></b>({audio: true, video: true}, function(stream) {
   var video = document.querySelector('video');
   video.src = <b>window.<a data-tooltip-property="URL.createObjectURL" data-tooltip-lowercase data-tooltip-support='["unprefixed", "webkit"]' data-tooltip-js></a>(stream)</b>;
@@ -1359,55 +1364,55 @@ if (ab.byteLength) {
   console.log(e);
 });
 </pre>
-              <pre class="prettyprint centered" data-lang="html">&lt;video autoplay controls&gt;&lt;/video&gt;</pre>
-            </article>
-          </slide>
+                <pre class="prettyprint centered" data-lang="html">&lt;video autoplay controls&gt;&lt;/video&gt;</pre>
+              </article>
+            </slide>
 
-          <slide>
-            <hgroup>
-              <h2>WebRTC Demos</h2>
-            </hgroup>
-            <article>
-              <ul>
-                <li>
-                  <a href="http://html5-demos.appspot.com/static/getusermedia/photobooth.html">Photo booth</a>
-                </li>
-                <li>
-                  <a href="https://apprtc.appspot.com/">WebRTC on Google App Engine Demo</a>
-                </li>
-                <li>
-                  <a href="http://neave.com/webcam/html5/">Live Effects</a>
-                </li>
-                <li>
-                  <a href="http://www.html5rocks.com/en/tutorials/webgl/jsartoolkit_webrtc/">Augmented Reality</a>
-                </li>
-                <li>
-                  <a href="http://learningthreejs.com/data/live-video-in-webgl/">WebGL Live TV</a>
-                </li>
-                <li>
-                  <a href="http://people.opera.com/danield/webapps/instant-camera/">Instant Camera</a>
-                </li>
-                <li>
-                  <a href="http://people.opera.com/danield/html5/explode/">Explode Video</a>
-                </li>
-              </ul>
-            </article>
-          </slide>
+            <slide>
+              <hgroup>
+                <h2>WebRTC Demos</h2>
+              </hgroup>
+              <article>
+                <ul>
+                  <li>
+                    <a href="http://html5-demos.appspot.com/static/getusermedia/photobooth.html">Photo booth</a>
+                  </li>
+                  <li>
+                    <a href="https://apprtc.appspot.com/">WebRTC on Google App Engine Demo</a>
+                  </li>
+                  <li>
+                    <a href="http://neave.com/webcam/html5/">Live Effects</a>
+                  </li>
+                  <li>
+                    <a href="http://www.html5rocks.com/en/tutorials/webgl/jsartoolkit_webrtc/">Augmented Reality</a>
+                  </li>
+                  <li>
+                    <a href="http://learningthreejs.com/data/live-video-in-webgl/">WebGL Live TV</a>
+                  </li>
+                  <li>
+                    <a href="http://people.opera.com/danield/webapps/instant-camera/">Instant Camera</a>
+                  </li>
+                  <li>
+                    <a href="http://people.opera.com/danield/html5/explode/">Explode Video</a>
+                  </li>
+                </ul>
+              </article>
+            </slide>
 
-          <slide>
-            <hgroup>
-              <span>
-                <img src="images/icons/radar.svg" class="radar" title="Coming soon...keep it on your radar!">
-                <a href="http://crbug.com/113676" class="bug" title="Bug link"></a>
-              </span>
-              <h2>Recording Content</h2>
-            </hgroup>
-            <article>
-              <pre class="prettyprint" data-lang="html">
+            <slide>
+              <hgroup>
+                <span>
+                  <img src="images/icons/radar.svg" class="radar" title="Coming soon...keep it on your radar!">
+                  <a href="http://crbug.com/113676" class="bug" title="Bug link"></a>
+                </span>
+                <h2>Recording Content</h2>
+              </hgroup>
+              <article>
+                <pre class="prettyprint" data-lang="html">
 &lt;input type="button" value="⚫" onclick="record(this)">
 &lt;input type="button" value="◼" onclick="stop(this)">
 </pre>
-              <pre class="prettyprint" data-lang="js">
+                <pre class="prettyprint" data-lang="js">
 var localMediaStream, recorder;
 
 var record = function(button) {
@@ -1421,63 +1426,63 @@ var stop = function(button) {
   });
 };
 </pre>
-            </article>
-          </slide>
+              </article>
+            </slide>
 
-          <slide>
-            <hgroup>
-              <h2>Browser Support</h2>
-              <h3>
-                <code>getUserMedia()</code>
-              </h3>
-            </hgroup>
-            <article class="flexbox vcenter" style="height:65%">
-              <div class="browser-support">
-                <img src="images/browser_logos/safari_logo.png">
-                <img src="images/chrome_logo.png" class="supported">
-                <img src="images/browser_logos/ff_logo.png" class="supported">
-                <img src="images/browser_logos/opera_logo.png" class="supported">
-                <img src="images/browser_logos/ie10_logo.png"></div>
-            </article>
-          </slide>
+            <slide>
+              <hgroup>
+                <h2>Browser Support</h2>
+                <h3>
+                  <code>getUserMedia()</code>
+                </h3>
+              </hgroup>
+              <article class="flexbox vcenter" style="height:65%">
+                <div class="browser-support">
+                  <img src="images/browser_logos/safari_logo.png">
+                  <img src="images/chrome_logo.png" class="supported">
+                  <img src="images/browser_logos/ff_logo.png" class="supported">
+                  <img src="images/browser_logos/opera_logo.png" class="supported">
+                  <img src="images/browser_logos/ie10_logo.png"></div>
+              </article>
+            </slide>
 
-        <slide class="can nobackground" data-body-class="stream">
-          <article class="flexbox vcenter">
-            <hgroup>
-              <h2 class="white auto-fadein">Stream Multimedia</h2>
-              <span class="build">
-                <h1 class="stamp">Confirmed</h1>
-              </span>
-            </hgroup>
-            <div class="source">
-              <a href="http://www.flickr.com/photos/nikonvscanon/2081397439/" class="white">www.flickr.com/photos/nikonvscanon/2081397439/</a>
-            </div>
-          </article>
-        </slide>
+            <slide class="can nobackground" data-body-class="stream">
+              <article class="flexbox vcenter">
+                <hgroup>
+                  <h2 class="white auto-fadein">Stream Multimedia</h2>
+                  <span class="build">
+                    <h1 class="stamp">Confirmed</h1>
+                  </span>
+                </hgroup>
+                <div class="source">
+                  <a href="http://www.flickr.com/photos/nikonvscanon/2081397439/" class="white">www.flickr.com/photos/nikonvscanon/2081397439/</a>
+                </div>
+              </article>
+            </slide>
 
-        <slide>
-          <hgroup>
-            <span>
-              <a href="http://dev.w3.org/html5/websockets/#dom-websocket-binarytype" class="spec" title="Spec link"></a>
-            </span>
-            <h2>Binary WebSockets</h2>
-            <h3>New look, same great taste</h3>
-          </hgroup>
-          <article>
-            <ul>
-              <li>WebSockets suffered the same limitations as Workers.</li>
-              <li>
-                Now send
-                <code>File</code>
-                ,
-                <code>Blob</code>
-                , or
-                <code>ArrayBuffer</code>
-                types.
-              </li>
-            </ul>
-            <div class="build">
-              <pre class="prettyprint" data-lang="js">
+            <slide>
+              <hgroup>
+                <span>
+                  <a href="http://dev.w3.org/html5/websockets/#dom-websocket-binarytype" class="spec" title="Spec link"></a>
+                </span>
+                <h2>Binary WebSockets</h2>
+                <h3>New look, same great taste</h3>
+              </hgroup>
+              <article>
+                <ul>
+                  <li>WebSockets suffered the same limitations as Workers.</li>
+                  <li>
+                    Now send
+                    <code>File</code>
+                    ,
+                    <code>Blob</code>
+                    , or
+                    <code>ArrayBuffer</code>
+                    types.
+                  </li>
+                </ul>
+                <div class="build">
+                  <pre class="prettyprint" data-lang="js">
 var socket = new WebSocket('ws://example.com/sock', ['dumby-protocol']);
 <b>socket.binaryType = 'blob';</b> // or 'arraybuffer'
 socket.onopen = function(e) {
@@ -1491,109 +1496,128 @@ socket.onmessage = function(e) {
   document.querySelector('img').src = <b><a data-tooltip-property="URL.createObjectURL" data-tooltip-lowercase data-tooltip-support='["unprefixed", "webkit"]' data-tooltip-js></a>(e.data);</b>
 };
 </pre>
-            </div>
-          </article>
-        </slide>
+                </div>
+              </article>
+            </slide>
 
-       <slide hidden>
-          <hgroup>
-            <h2>Browser Support</h2>
-          </hgroup>
-          <article class="flexbox vcenter">
-            <div class="browser-support">
-              <img src="images/browser_logos/safari_logo.png">
-              <img src="images/chrome_logo.png" class="supported">
-              <img src="images/browser_logos/ff_logo.png">
-              <img src="images/browser_logos/opera_logo.png">
-              <img src="images/browser_logos/ie10_logo.png"></div>
-          </article>
-        </slide>
+            <slide hidden>
+              <hgroup>
+                <h2>Browser Support</h2>
+              </hgroup>
+              <article class="flexbox vcenter">
+                <div class="browser-support">
+                  <img src="images/browser_logos/safari_logo.png">
+                  <img src="images/chrome_logo.png" class="supported">
+                  <img src="images/browser_logos/ff_logo.png">
+                  <img src="images/browser_logos/opera_logo.png">
+                  <img src="images/browser_logos/ie10_logo.png"></div>
+              </article>
+            </slide>
 
-        <slide>
-          <article class="flexbox vcenter auto-fadein can">
-            <h2>Chrome Frame</h2>
-            <img src="images/cf-logo.png" 
+            <slide>
+              <article class="flexbox vcenter auto-fadein can">
+                <h2>Chrome Frame</h2>
+                <img src="images/cf-logo.png" 
           class="centered quimby_search_image" style="height:250px">
-            <p>Meta tag:</p>
-            <pre class="prettyprint">
+                <p>Meta tag:</p>
+                <pre class="prettyprint">
         &lt;meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
       </pre>
 
-            <p>Header:</p>
-            <pre class="prettyprint">X-UA-Compatible: IE=Edge,chrome=1</pre>
+                <p>Header:</p>
+                <pre class="prettyprint">X-UA-Compatible: IE=Edge,chrome=1</pre>
 
-          </article>
-        </slide>
+              </article>
+            </slide>
 
-        <slide>
-          <hgroup>
-            <h2>More *Bold* Audio Demos</h2>
-          </hgroup>
-          <article>
-            <ul>
-              <li>
-                <a href="http://www.technitone.com/">Technitone</a>
-              </li>
-              <li>
-                <a href="http://labs.dinahmoe.com/plink/">Plink</a>
-              </li>
-              <li>
-                <a href="http://static.echonest.com/BohemianRhapsichord/index.html">Bohemian Rhapsichord</a>
-              </li>
-              <li>
-                <a href="http://airtightinteractive.com/demos/js/reactive/">3D Audio Visualizer</a>
-              </li>
-              <li>
-                <a href="http://www.htmlfivewow.com/demos/hal/index.html">GAL 9000</a>
-              </li>
-              <li>
-                <a href="http://www.htmlfivewow.com/demos/audio-visualizer/index.html">HTML5Wow Visualizer</a>
-              </li>
-              <li>
-                <a href="http://alteredqualia.com/three/examples/webgl_city.html">WebGL City</a>
-              </li>
-              <li>
-                <a href="http://www.iquilezles.org/apps/soundtoy/index.html">Sound Toy</a>
-              </li>
-            </ul>
-          </article>
-        </slide>
+            <slide>
+              <hgroup>
+                <h2>More *Bold* Audio Demos</h2>
+              </hgroup>
+              <article>
+                <ul>
+                  <li>
+                    <a href="http://www.technitone.com/">Technitone</a>
+                  </li>
+                  <li>
+                    <a href="http://labs.dinahmoe.com/plink/">Plink</a>
+                  </li>
+                  <li>
+                    <a href="http://static.echonest.com/BohemianRhapsichord/index.html">Bohemian Rhapsichord</a>
+                  </li>
+                  <li>
+                    <a href="http://airtightinteractive.com/demos/js/reactive/">3D Audio Visualizer</a>
+                  </li>
+                  <li>
+                    <a href="http://www.htmlfivewow.com/demos/hal/index.html">GAL 9000</a>
+                  </li>
+                  <li>
+                    <a href="http://www.htmlfivewow.com/demos/audio-visualizer/index.html">HTML5Wow Visualizer</a>
+                  </li>
+                  <li>
+                    <a href="http://alteredqualia.com/three/examples/webgl_city.html">WebGL City</a>
+                  </li>
+                  <li>
+                    <a href="http://www.iquilezles.org/apps/soundtoy/index.html">Sound Toy</a>
+                  </li>
+                </ul>
+              </article>
+            </slide>
 
-        <!-- @@@ Web Components fun -->
+            <!-- @@@ Web Components fun -->
 
-        <slide>
-            <article class="flexbox vcenter centered">
-              <h2 class="auto-fadein">Web components?!</h2>
-              <img src="images/webcomponents.png" alt="web component logo" />
-            </article>
-        </slide>
+            <slide>
+              <article class="flexbox vcenter centered">
+                <h2 class="auto-fadein">Web components?!</h2>
+                <img src="images/webcomponents.png" alt="web component logo" />
+              </article>
+            </slide>
 
-        <slide id="feature-detect"  >
-          
-            <hgroup>
-              <span>
-                
-                
-              </span>
-              <h2>To view the demos in this presentation</h2>
-              <h3></h3>
-            </hgroup>
-            <article ><ol>
-        <li>Use Chrome Canary</li>
-        <li>Enable yourself:<ul>
-        <li><strong>Enable experimental WebKit features</strong> in <code>about:flags</code></li>
-        <li><strong>Enable experimental JavaScript</strong> in <code>about:flags</code></li>
-        <li><strong>Enable Show Shadow DOM</strong> in DevTools</li>
-        </ul>
-        </li>
-        </ol>
-        <p id="need-shadow" class="topmargin"><label></label><span>You don't have Shadow DOM enabled</span></p>
+            <slide id="feature-detect"  >
 
-        <p id="need-objectobserve"><label></label><span>You don't have Object.observe()</span></p>
+              <hgroup>
+                <span></span>
+                <h2>To view the demos in this presentation</h2>
+                <h3></h3>
+              </hgroup>
+              <article >
+                <ol>
+                  <li>Use Chrome Canary</li>
+                  <li>
+                    Enable yourself:
+                    <ul>
+                      <li> <strong>Enable experimental WebKit features</strong>
+                        in
+                        <code>about:flags</code>
+                      </li>
+                      <li>
+                        <strong>Enable experimental JavaScript</strong>
+                        in
+                        <code>about:flags</code>
+                      </li>
+                      <li>
+                        <strong>Enable Show Shadow DOM</strong>
+                        in DevTools
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+                <p id="need-shadow" class="topmargin">
+                  <label></label>
+                  <span>You don't have Shadow DOM enabled</span>
+                </p>
 
-        <p id="need-mo"><label></label><span>You don't have MutationObservers</span></p>
+                <p id="need-objectobserve">
+                  <label></label>
+                  <span>You don't have Object.observe()</span>
+                </p>
 
-        <script>
+                <p id="need-mo">
+                  <label></label>
+                  <span>You don't have MutationObservers</span>
+                </p>
+
+                <script>
         (function() {
         Element.prototype.createShadowRoot = Element.prototype.webkitCreateShadowRoot;
 
@@ -1639,644 +1663,1266 @@ socket.onmessage = function(e) {
         }
         })();
         </script>
-      </article>
-         
-      </slide>
+              </article>
 
-         <slide>
-          <hgroup>
-            <h2>"Back to the Future"</h2>
-          </hgroup>
-          <article class="auto-fadein backimages">
-            <ul>
-              <li>
-                <img src="images/embdwindgets.png" alt="embed widgets" />
-                Embedded widgets
-              </li>
-              <li>
-                <img src="images/frameworks.png" alt="frameworks" />
-                Reusable libraries / frameworks
-              </li>
-            </ul>
-           
+            </slide>
 
-          </article>
-        </slide>
+            <slide>
+              <hgroup>
+                <h2>"Back to the Future"</h2>
+              </hgroup>
+              <article class="auto-fadein backimages">
+                <ul>
+                  <li>
+                    <img src="images/embdwindgets.png" alt="embed widgets" />
+                    Embedded widgets
+                  </li>
+                  <li>
+                    <img src="images/frameworks.png" alt="frameworks" />
+                    Reusable libraries / frameworks
+                  </li>
+                </ul>
 
-        <slide id="b2tf" class="nobackground fill" style="background-image: url(images/b2tf.jpg)">
-            <hgroup>
-              <h2>We're going "Back to the Future"</h2>
-            </hgroup>
-            <article class="flexbox vcenter centered auto-fadein">
-              <div class="build">
-                <p>A <b>tectonic shift</b> for web development</p>
-                <p>Important <b>new constructs</b> for building complex web apps</p>
-                <p><em>"Declarative Renaissance"</em></p>
-              </div>
-            </article>
-        </slide>
+              </article>
+            </slide>
 
-        <slide>
-          
-            <hgroup>
-              <span>
-                
-                
-              </span>
-              <h2>Defining Web Components</h2>
-              <h3>key players</h3>
-            </hgroup>
-            <article ><ul class="build">
-        <li><code>&lt;template&gt;</code> - <em>Scaffold/Blueprint</em><ul class="build">
-        <li>inert chunks of clonable DOM. Can be activated for later use (e.g MDV)</li>
-        </ul>
-        </li>
-        <li>Custom elements - <em>Toolbelt</em><ul class="build">
-        <li>create new HTML elements - expand HTML's existing vocabulary.</li>
-        <li>extend existing DOM objects with new imperative APIs</li>
-        </ul>
-        </li>
-        <li>Shadow DOM - <em>Mortar/glue</em><ul class="build">
-        <li>building blocks for encapsulation &amp; boundaries inside of DOM</li>
-        </ul>
-        </li>
-        </ul></article>
-         
-        </slide>
+            <slide id="b2tf" class="nobackground fill" style="background-image: url(images/b2tf.jpg)">
+              <hgroup>
+                <h2>We're going "Back to the Future"</h2>
+              </hgroup>
+              <article class="flexbox vcenter centered auto-fadein">
+                <div class="build">
+                  <p>
+                    A
+                    <b>tectonic shift</b>
+                    for web development
+                  </p>
+                  <p>
+                    Important
+                    <b>new constructs</b>
+                    for building complex web apps
+                  </p>
+                  <p> <em>"Declarative Renaissance"</em>
+                  </p>
+                </div>
+              </article>
+            </slide>
 
-        <slide>
-            <hgroup>
-              <h2>Defining Web Components</h2>
-              <h3>supporting cast</h3>
-            </hgroup>
-          <article>
-            <ul class="build">
-            <li>Style encapsulation</li>
-            <li>Knowledge into app's state<ul class="build">
-            <li>DOM changes: <code>MutationObserver</code></li>
-            <li>Model changes: <code>Object.observer()</code></li>
-            </ul>
-            </li>
-            <li>CSS variables, <code>calc()</code></li>
-            </ul>
-            <p class="centered topmargin build">
-              <span><em>A collection new capabilities in the browser</em></span>
-            </p>
-          </article>   
-        </slide>
+            <slide>
 
-        <slide>
-          
-            <hgroup>
-              <span>
-                
-                
-              </span>
-              <h2><img src="images/calendar.png"> The templates of today</h2>
-              <h3></h3>
-            </hgroup>
-            <article ><p><em>Method #1</em>: "offscreen" DOM using <code>[hidden]</code> or <code>display:none</code></p>
-        <pre class="prettyprint" data-lang="html">
+              <hgroup>
+                <span></span>
+                <h2>Defining Web Components</h2>
+                <h3>key players</h3>
+              </hgroup>
+              <article >
+                <ul class="build">
+                  <li>
+                    <code>&lt;template&gt;</code>
+                    -
+                    <em>Scaffold/Blueprint</em>
+                    <ul class="build">
+                      <li>
+                        inert chunks of clonable DOM. Can be activated for later use (e.g MDV)
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Custom elements -
+                    <em>Toolbelt</em>
+                    <ul class="build">
+                      <li>
+                        create new HTML elements - expand HTML's existing vocabulary.
+                      </li>
+                      <li>extend existing DOM objects with new imperative APIs</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Shadow DOM -
+                    <em>Mortar/glue</em>
+                    <ul class="build">
+                      <li>
+                        building blocks for encapsulation &amp; boundaries inside of DOM
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </article>
+
+            </slide>
+
+            <slide>
+              <hgroup>
+                <h2>Defining Web Components</h2>
+                <h3>supporting cast</h3>
+              </hgroup>
+              <article>
+                <ul class="build">
+                  <li>Style encapsulation</li>
+                  <li>
+                    Knowledge into app's state
+                    <ul class="build">
+                      <li>
+                        DOM changes:
+                        <code>MutationObserver</code>
+                      </li>
+                      <li>
+                        Model changes:
+                        <code>Object.observer()</code>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    CSS variables,
+                    <code>calc()</code>
+                  </li>
+                </ul>
+                <p class="centered topmargin build">
+                  <span>
+                    <em>A collection new capabilities in the browser</em>
+                  </span>
+                </p>
+              </article>
+            </slide>
+
+            <slide>
+
+              <hgroup>
+                <span></span>
+                <h2>
+                  <img src="images/calendar.png">The templates of today</h2>
+                <h3></h3>
+              </hgroup>
+              <article >
+                <p>
+                  <em>Method #1</em>
+                  : "offscreen" DOM using
+                  <code>[hidden]</code>
+                  or
+                  <code>display:none</code>
+                </p>
+                <pre class="prettyprint" data-lang="html">
         &lt;div id="mytemplate" hidden>
           &lt;img src="logo.png">
           &lt;div class="comment">&lt;/div>
         &lt;/div>
         </pre>
 
-        <ol class="build">
-          <li><label class="good"></label> We're working directly w/ DOM. </li>
-          <li><label class="bad"></label> Resources are still loaded (e.g. that <code>&lt;img&gt;</code>)</li>
-          <li><label class="bad"></label> Style and theming is painful.
-            <ul class="build">
-              <li>embedding page must scope all its CSS to <code>#mytemplate</code>.</li>
-              <li>no guarantees on future naming collisions.</li>
-            </ul>
-          </li>
-        </ol>
-      </article>
-         
-        </slide>
+                <ol class="build">
+                  <li>
+                    <label class="good"></label>
+                    We're working directly w/ DOM.
+                  </li>
+                  <li>
+                    <label class="bad"></label>
+                    Resources are still loaded (e.g. that
+                    <code>&lt;img&gt;</code>
+                    )
+                  </li>
+                  <li>
+                    <label class="bad"></label>
+                    Style and theming is painful.
+                    <ul class="build">
+                      <li>
+                        embedding page must scope all its CSS to
+                        <code>#mytemplate</code>
+                        .
+                      </li>
+                      <li>no guarantees on future naming collisions.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </article>
 
-        <slide>
-          
-            <hgroup>
-              <span>
-                
-                
-              </span>
-              <h2><img src="images/calendar.png" alt="Today" title="Today"> The templates of today</h2>
-              <h3></h3>
-            </hgroup>
-            <article ><p><em>Method #2</em>: manipulating markup as string. Overload <code>&lt;script&gt;</code>:</p>
-        <pre class="prettyprint" data-lang="js">
+            </slide>
+
+            <slide>
+
+              <hgroup>
+                <span></span>
+                <h2>
+                  <img src="images/calendar.png" alt="Today" title="Today">The templates of today</h2>
+                <h3></h3>
+              </hgroup>
+              <article >
+                <p>
+                  <em>Method #2</em>
+                  : manipulating markup as string. Overload
+                  <code>&lt;script&gt;</code>
+                  :
+                </p>
+                <pre class="prettyprint" data-lang="js">
         &lt;script id="mytemplate" <b>type="text/x-handlebars-template"</b>>
           &lt;img src="logo.png">
           &lt;div class="comment">&lt;/div>
         &lt;/script>
         </pre>
 
-        <ol>
-        <li><label class="bad"></label> encourages run-time string parsing (via <code>.innerHTML</code>)<ul>
-        <li>may include user-supplied data &rarr; XSS attacks.</li>
-        </ul>
-        </li>
-        </ol>
-        <p class="topmargin"></p>
+                <ol>
+                  <li>
+                    <label class="bad"></label>
+                    encourages run-time string parsing (via
+                    <code>.innerHTML</code>
+                    )
+                    <ul>
+                      <li>may include user-supplied data &rarr; XSS attacks.</li>
+                    </ul>
+                  </li>
+                </ol>
+                <p class="topmargin"></p>
 
-        <p>Examples: <a href="http://handlebarsjs.com/">handlebars.js</a>, John Resig's <a href="http://ejohn.org/blog/javascript-micro-templating/">micro-template script</a></p></article>
-         
-        </slide>
+                <p>
+                  Examples:
+                  <a href="http://handlebarsjs.com/">handlebars.js</a>
+                  , John Resig's
+                  <a href="http://ejohn.org/blog/javascript-micro-templating/">micro-template script</a>
+                </p>
+              </article>
 
-        <slide>
-            <hgroup>
-              <span>
+            </slide>
+
+            <slide>
+              <hgroup>
+                <span>
                   <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html" target="_blank" class="spec" title="Spec link"></a>
-              </span>
-              <h2><img src="images/clock.png" alt="Tomorrow" title="Tomorrow"> Templating of the near future</h2>
-              <h3><code>&lt;template&gt;</code></h3>
-            </hgroup>
-            <article>
-              <p>Contains inert markup intended to be used later:</p>
-        <pre class="prettyprint" data-lang="html">
+                </span>
+                <h2>
+                  <img src="images/clock.png" alt="Tomorrow" title="Tomorrow">Templating of the near future</h2>
+                <h3>
+                  <code>&lt;template&gt;</code>
+                </h3>
+              </hgroup>
+              <article>
+                <p>Contains inert markup intended to be used later:</p>
+                <pre class="prettyprint" data-lang="html">
         &lt;template id="mytemplate">
           &lt;img src="">
           &lt;div class="comment">&lt;/div>
         &lt;/template>
         </pre>
 
-        <ol>
-          <li><label class="good"></label> We're working directly w/ DOM again. </li>
-          <li><label class="good"></label> Parsed, not rendered<ul>
-          <li><code>&lt;script&gt;</code>s don't run, images aren't loaded, media doesn't play, etc.</li>
-          </ul>
-        </li>
-        </ol>
-      </article>
-         
-        </slide>
+                <ol>
+                  <li>
+                    <label class="good"></label>
+                    We're working directly w/ DOM again.
+                  </li>
+                  <li>
+                    <label class="good"></label>
+                    Parsed, not rendered
+                    <ul>
+                      <li>
+                        <code>&lt;script&gt;</code>
+                        s don't run, images aren't loaded, media doesn't play, etc.
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+              </article>
 
-        <slide>
-            <hgroup>
-              <h2><img src="images/clock.png"> Templating of the near future</h2>
-              <h3></h3>
-            </hgroup>
-            <article ><ul>
-        <li>Appending inert DOM to a node makes it go "live":</li>
-        </ul>
-        <pre class="prettyprint" data-lang="js">
+            </slide>
+
+            <slide>
+              <hgroup>
+                <h2>
+                  <img src="images/clock.png">Templating of the near future</h2>
+                <h3></h3>
+              </hgroup>
+              <article >
+                <ul>
+                  <li>Appending inert DOM to a node makes it go "live":</li>
+                </ul>
+                <pre class="prettyprint" data-lang="js">
         var t = document.querySelector('#mytemplate');
         t.querySelector('img').src = 'http://...';
         document.body.appendChild(<b>t.content.cloneNode()</b>);
         </pre>
 
-        <div class="build">
+                <div class="build">
 
-        <div>
-        <code>.content</code> provides access to the <code>&lt;template&gt;</code>'s guts:</p>
+                  <div>
+                    <code>.content</code>
+                    provides access to the
+                    <code>&lt;template&gt;</code>
+                    's guts:
+                  </p>
 
-        <pre class="prettyprint" data-lang="interface">
+                  <pre class="prettyprint" data-lang="interface">
         interface HTMLTemplateElement : HTMLElement {
           attribute DocumentFragment content;
         }
         </pre>
-        </div>
+                </div>
 
-        </div></article>
-         
-        </slide>
+              </div>
+            </article>
 
-        <slide>
-          <article class="flexbox vcenter centered">
-            <h2 class="auto-fadein">Templates</h2>
-            <h3 class="auto-fadein">baked into the web platform...</h3>
-          </article>
-        </slide>
+          </slide>
 
-        <slide  class="nobackground dirty-sexy funnyimage" style="background-image: url(images/dirty-sexy-money.gif)">
+          <slide>
+            <article class="flexbox vcenter centered">
+              <h2 class="auto-fadein">Templates</h2>
+              <h3 class="auto-fadein">baked into the web platform...</h3>
+            </article>
+          </slide>
+
+          <slide  class="nobackground dirty-sexy funnyimage" style="background-image: url(images/dirty-sexy-money.gif)">
             <hgroup>
               <h2></h2>
               <h3>$$$</h3>
             </hgroup>
             <article ></article>
-        </slide>
+          </slide>
 
-        <slide id="shadow-dom-segue" class="segue nobackground highlight fill" style="background-image: url(images/blocks.jpg)">
-            <aside class="gdbar"><img src="images/chrome_logo.png"></aside>
+          <slide id="shadow-dom-segue" class="segue nobackground highlight fill" style="background-image: url(images/blocks.jpg)">
+            <aside class="gdbar">
+              <img src="images/chrome_logo.png"></aside>
             <hgroup class="auto-fadein">
               <h2>Shadow DOM</h2>
               <h3>mortar / glue</h3>
             </hgroup>
+          </slide>
+
+          <slide>
+
+            <hgroup>
+              <span></span>
+              <h2>Encapsulation</h2>
+              <h3></h3>
+            </hgroup>
+            <article >
+              <div class="build">
+
+                <p>
+                  <label class="good"></label>
+                  Fundamental foundation of OOP
+                </p>
+
+                <p>
+                  <label class="good"></label>
+                  Separates code
+                  <em>you</em>
+                  wrote from the code that will
+                  <em>consume</em>
+                  it
+                </p>
+
+                <p>
+                  <label class="bad"></label>
+                  We don't have it on the web!
+                </p>
+
+                <p>
+                  <label class="sortof"></label>
+                  Well, sort of:
+                </p>
+
+                <h2 class="centered">
+                  <code>&lt;iframe&gt;</code>
+                </h2>
+
+                <p class="topmargin">
+                  <label class="bad"></label>
+                  <code>&lt;iframe&gt;</code>
+                  are heavy and restrictive
+                </p>
+
+              </div>
+            </article>
+
+          </slide>
+
+          <slide   >
+
+            <hgroup>
+              <span>
+
+                <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html" target="_blank" class="spec" title="Spec link"></a>
+
+              </span>
+              <h2>Shadow DOM</h2>
+              <h3></h3>
+            </hgroup>
+            <article >
+              <p>Is complex! Let's cover the basics:</p>
+              <ul>
+                <li>Concept of Shadow DOM</li>
+                <li>Creating Shadow DOM</li>
+                <li>Insertion Points</li>
+                <li>
+                  Styling
+                  <ul>
+                    <li>encapsulated styles &amp; shadow boundaries</li>
+                    <li>styling hooks: custom pseudo elements</li>
+                    <li>
+                      <code>@host</code>
+                      at-rule
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </article>
+
+          </slide>
+
+          <slide   >
+
+            <hgroup>
+              <span></span>
+              <h2>Turns out...</h2>
+              <h3></h3>
+            </hgroup>
+            <article >
+              <ul class="build">
+                <li>DOM nodes can already "host" hidden DOM.</li>
+                <li>It can't be accessed traversing the DOM.</li>
+              </ul>
+              <div class="build shadowvideo">
+                <video controls height="300" src="http://www.ioncannon.net/examples/vp8-webm/big_buck_bunny_480p.webm"></video>
+                <p style="float:left;margin-left: 1em;">
+                  <input type="date" style="zoom:2">
+                  <br>
+                  <input type="time" style="zoom:2"></p>
+              </div>
+
+              <p class="centered build" style="font-size:40px;">
+                <span>So...browser vendor's have been holding out on us!</span>
+              </p>
+            </article>
+
+          </slide>
+
+          <slide   >
+
+            <hgroup>
+              <span></span>
+              <h2></h2>
+              <h3></h3>
+            </hgroup>
+            <article class="flexbox vcenter centered defintion">
+              <h2 class="auto-fadein">Shadow DOM</h2>
+
+              <h3 class="auto-fadein">
+                exposes the same internals browser
+vendors have been using to implement their native controls, to us
+              </h3>
+            </article>
+
+          </slide>
+
+          <slide id="shadow-dom-host"  >
+
+            <hgroup>
+              <span>
+
+                <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html" target="_blank" class="spec" title="Spec link"></a>
+
+              </span>
+              <h2>Attaching Shadow DOM to a host</h2>
+              <h3></h3>
+            </hgroup>
+            <article class="flexbox vcenter centered">
+              <p>
+                <img src="images/shadow-trees.svg" style="height: 100%;"></p>
+            </article>
+
+          </slide>
+
+          <slide id="shadow-dom-render"  >
+
+            <hgroup>
+              <span>
+
+                <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html" target="_blank" class="spec" title="Spec link"></a>
+
+              </span>
+              <h2>Shadow tree is rendered instead</h2>
+              <h3></h3>
+            </hgroup>
+            <article class="flexbox vcenter centered">
+              <p>
+                <img src="images/shadow-rendering.svg" style="height:100%;"></p>
+              <div class="devtools" title="click me" alt="click me"></div>
+            </article>
+
+          </slide>
+
+          <slide id="shadow-dom-creating"  >
+
+            <hgroup>
+              <span>
+
+                <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html#extensions-to-element" target="_blank" class="spec" title="Spec link"></a>
+
+              </span>
+              <h2>Creating Shadow DOM</h2>
+              <h3></h3>
+            </hgroup>
+            <article >
+              <aside class="note">
+                <section>
+                  <img src="images/shadow-rendering.svg" style="width: 100%;"></section>
+              </aside>
+
+              <pre class="prettyprint" data-lang="html">
+    &lt;div id="host">
+      &lt;h1>My Title&lt;/h1>
+      &lt;h2>My Subtitle&lt;/h2>
+      &lt;div>...other content...&lt;/div>
+    &lt;/div>
+    </pre>
+
+              <pre class="prettyprint" data-lang="js">
+    var host = document.querySelector('#host');
+    <b>var shadow = host.<a data-tooltip-property="createShadowRoot" data-tooltip-support='["webkit"]' data-tooltip-js>createShadowRoot</a>();</b>
+    <b>shadow.innerHTML = '&lt;h2>Yo, you got replaced!&lt;/h2>' +
+                       '&lt;div>by my awesome content&lt;/div>';</b>
+    // <b>host.<a data-tooltip-property="shadowRoot" data-tooltip-support='["webkit"]' data-tooltip-js data-tooltip-js-property>shadowRoot</a>;</b>
+    </pre>
+
+              <div class="host">
+                <h1>My Title</h1>
+                <h2>My Subtitle</h2>
+                <div>...other content...</div>
+              </div>
+
+              <script>
+    (function() {
+    var shadow = document.querySelector('#shadow-dom-creating .host').createShadowRoot();
+    shadow.innerHTML = '<h2>Yo, you got replaced!</h2>' +
+                       '<div>by my awesome content</div>';
+    })();
+    </script>
+            </article>
+          </slide>
+
+          <slide id="shadow-dom-style-encapsulation"  >
+
+            <hgroup>
+              <span></span>
+              <h2>Style encapsulation</h2>
+              <h3></h3>
+            </hgroup>
+            <article >
+              <aside class="note">
+                <section>
+                  <img src="images/shadow-rendering.svg" style="width: 100%;"></section>
+              </aside>
+
+              <p>
+                <code>&lt;style&gt;</code>
+                s defined in
+                <code>ShadowRoot</code>
+                are scoped.
+              </p>
+              <pre class="prettyprint" data-lang="js">
+    var shadow = document.querySelector('#host').<a data-tooltip-property="createShadowRoot" data-tooltip-support='["webkit"]' data-tooltip-js>createShadowRoot</a>();
+    shadow.innerHTML = '<b>&lt;style>h2 { color: red; }&lt;/style></b>' + 
+                       '&lt;h2>Yo, you got replaced!&lt;/h2>' + 
+                       '&lt;div>by my awesome content&lt;/div>';
+    </pre>
+
+              <div class="host">
+                <h1>My Title</h1>
+                <h2>My Subtitle</h2>
+                <div>...other content...</div>
+              </div>
+
+              <script>
+    (function() {
+    var shadow = document.querySelector('#shadow-dom-style-encapsulation .host').createShadowRoot();
+    shadow.innerHTML = '<style>h2 { color: red;}</style>' + 
+                       '<h2>Yo, you got replaced!</h2>' + 
+                       '<div>by my awesome content</div>';
+
+    })();
+    </script>
+            </article>
+
+          </slide>
+
+          <slide id="shadow-host-at"  >
+
+            <hgroup>
+              <span>
+
+                <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html#host-at-rule" target="_blank" class="spec" title="Spec link"></a>
+
+              </span>
+              <h2>
+                Styling the host element (
+                <code>@host</code>
+                at-rule)
+              </h2>
+              <h3></h3>
+            </hgroup>
+            <article class="smaller">
+              <ul>
+                <li>
+                  <code>@host</code>
+                  selects the shadow host element.
+                </li>
+                <li>Allows reacting to different states:</li>
+              </ul>
+              <pre class="prettyprint" data-lang="css">
+    &lt;style>
+    <b>@host</b> {
+      /* Gotcha: higher specificity than any selector,
+         lower specificity than declarations from a &lt;style&gt; attribute. */
+      * {
+        opacity: 0.2;
+        <a data-tooltip-property="transition" data-tooltip-support='["webkit", "moz", "ms", "o", "unprefixed"]'>transition</a>: opacity 400ms ease-in-out;
+      }
+      *:hover {
+        opacity: 1;
+      }
+    }
+    &lt;/style>
+    </pre>
+
+              <div class="host">
+                <h1>My Title</h1>
+                <h2>My Subtitle</h2>
+                <div>...other content...</div>
+              </div>
+
+              <script>
+    (function() {
+    var shadow = document.querySelector('#shadow-host-at .host').createShadowRoot();
+    shadow.innerHTML = '<style>h2 { color: red;}' +
+    '@host {\
+      * {\
+        opacity: 0.2;\
+        -webkit-transition: opacity 400ms ease-in-out;\
+      }\
+      *:hover {\
+        opacity: 1;\
+      }\
+    }</style>' + 
+    '<h2>Yo, you got replaced!</h2>' + 
+    '<div>by my awesome content</div>';
+
+    })();
+    </script>
+            </article>
+
+          </slide>
+
+          <slide   >
+
+            <hgroup>
+              <span></span>
+              <h2>Remember our host node</h2>
+              <h3></h3>
+            </hgroup>
+            <article >
+              <pre class="prettyprint" data-lang="html">
+    &lt;div id="host">
+      &lt;h1>My Title&lt;/h1>
+      &lt;h2>My Subtitle&lt;/h2>
+      &lt;div>...other content...&lt;/div>
+    &lt;/div>
+    </pre>
+
+              <p>that guy rendered as:</p>
+              <pre class="prettyprint" data-lang="html">
+    &lt;div id="host">
+      <span style="opacity:0.5">#shadow-root</span>
+        &lt;style>h2 {color: red;}&lt;/style>
+        &lt;h2>Yo, you got replaced!&lt;/h2>
+        &lt;div>by my awesome content&lt;/div>
+    &lt;/div>
+    </pre>
+
+              <p>
+                ...everything was replaced when we attached the shadow DOM
+                <label class="bad"></label>
+              </p>
+            </article>
+
+          </slide>
+
+          <slide id="insertion-points2">
+            <hgroup>
+              <span></span>
+              <h2>Shadow DOM insertion points</h2>
+              <h3>funnels for host's children</h3>
+            </hgroup>
+            <article class="flexbox vcenter centered build">
+              <div class="auto-fadein"></div>
+            </article>
+
+          </slide>
+
+          <slide id="shadow-dom-insertion-pts-example"  >
+
+            <hgroup>
+              <span></span>
+              <h2>Shadow DOM insertion points</h2>
+              <h3>funnels for host's children</h3>
+            </hgroup>
+            <article class="smaller">
+              <ul>
+                <li>
+                  <code>&lt;content&gt;</code>
+                  elements are insertion points.
+                </li>
+                <li>
+                  <code>select</code>
+                  attribute uses CSS selectors to specify where children are funneled.
+                </li>
+                <li>
+                  <code>content.getDistributedNodes()</code>
+                  returns list of element distributed in the insertion point.
+                </li>
+              </ul>
+              <div class="columns-2">
+                <pre class="prettyprint" data-lang="host">
+    &lt;div id="host"&gt;
+      &lt;h1&gt;My Title&lt;/h1&gt;
+      &lt;h2&gt;My Subtitle&lt;/h2&gt;
+      &lt;div&gt;...other content...&lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+
+                <pre class="prettyprint" data-lang="Shadow DOM" style="-webkit-column-break-before: always;">
+    &lt;style>
+      h2 {color: red;}
+    &lt;/style>
+    &lt;hgroup>
+      <b>&lt;content select="h2">&lt;/content&gt;</b>
+      &lt;div&gt;You got enhanced&lt;/div&gt;
+      <b>&lt;content select="h1:first-child">&lt;/content&gt;</b>
+    &lt;/hgroup>
+    <b>&lt;content select="*">&lt;/content&gt;</b>
+    </pre>
+              </div>
+
+              <div class="host">
+                <h1>My Title</h1>
+                <h2>My Subtitle</h2>
+                <div>...other content...</div>
+              </div>
+
+              <script>
+    (function() {
+    var shadow = document.querySelector('#shadow-dom-insertion-pts-example .host').createShadowRoot();
+    shadow.innerHTML = '<style>\
+    h2 { color: red;}\
+    </style>\
+    <hgroup>\
+      <content select="h2"></content>\
+      <div>You got enhanced</div>\
+      <content select="h1:first-child"></content>\
+    </hgroup>\
+    <content select="*"></content>';
+    })();
+    </script>
+            </article>
+
+          </slide>
+
+          <slide id='insertionpoint' class="nobackground funnyimage" style="background-image: url(images/insert-point-sun.png)">
+
+            <article class="flexbox vcenter centered defintion auto-fadein">
+              <h2>Insertion Points</h2>
+              <p style="color: black;">allow us to define a declarative API</p>
+            </article>
+          </slide>
+
+          <slide>
+            <hgroup>
+              <span></span>
+              <h2></h2>
+              <h3></h3>
+            </hgroup>
+            <article class="flexbox vcenter centered">
+              <h2 class="auto-fadein">Encapsulation / Boundaries / Re-usability</h2>
+
+              <h3 class="auto-fadein">baked into the web platform...</h3>
+            </article>
+          </slide>
+
+          <slide id="mutation-segue" class="segue nobackground highlight fill" style="background-image: url(images/mutation.jpg)">
+            <aside class="gdbar">
+              <img src="images/chrome_logo.png"></aside>
+            <hgroup class="auto-fadein">
+              <h2>Observing Changes</h2>
+              <h3>Mutation Observers / Object.observe()</h3>
+            </hgroup>
+
+          </slide>
+
+          <slide>
+            <hgroup>
+              <span>
+
+                <a href="http://www.w3.org/TR/domcore/#mutation-observers" target="_blank" class="spec" title="Spec link"></a>
+
+              </span>
+              <h2>Mutation Observers</h2>
+              <h3>watch for changes in the DOM</h3>
+            </hgroup>
+            <article >
+              <ul class="build">
+                <li>
+                  Defined in
+                  <a href="http://www.w3.org/TR/domcore/#mutation-observers">DOM4</a>
+                  ( Yep. We're on DOM4! )
+                </li>
+                <li>
+                  Observers, not listeners
+                  <ul class="build">
+                    <li>
+                      triggered by DOM changes rather than events (e.g.
+                      <code>oninput</code>
+                      ,
+                      <code>click</code>
+                      )
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Callback triggered at the end of DOM modifications.
+                  <ul class="build">
+                    li>provided a list of all changes (
+                    <code>MutationRecord</code>
+                    s)
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Replacement for
+                <code>MutationEvent</code>
+                performance / stability bottlenecks.
+              </li>
+              <li>Availability: Chrome, Safari, FF</li>
+              <li>
+                <em>Who?</em>
+                JS Framework authors, extension developers
+              </li>
+            </ul>
+          </article>
+
+        </slide>
+
+        <slide   >
+
+          <hgroup>
+            <span></span>
+            <h2>Example</h2>
+            <h3>observe child node insertion/deletions</h3>
+          </hgroup>
+          <article >
+            <pre class="prettyprint" data-lang="js">
+    var observer = new <b><a data-tooltip-property="MutationObserver" data-tooltip-support='["unprefixed", "webkit"]' data-tooltip-js>MutationObserver</a></b>(function(mutations, observer) {
+      mutations.forEach(function(record) {
+        for (var i = 0, node; node = <b>record.addedNodes</b>[i]; i++) {
+          console.log(node);
+        }
+      });
+    });
+
+    <b>observer.observe(el, {</b>
+      <b>childList: true,</b>      // include childNode insertion/removals
+      //subtree: true,        // observe the subtree root at el
+      //characterData: true, // include textContent changes
+      //attribute: true      // include changes to attributes within the subtree
+    <b>});</b>
+
+    // observer.disconnect() // Stop observations
+    </pre>
+          </article>
+
+        </slide>
+
+        <slide   >
+
+          <hgroup>
+            <span></span>
+            <h2>Mutation Observers vs. Mutation Events</h2>
+            <h3></h3>
+          </hgroup>
+          <article >
+            <p>
+              <strong><code>MutationEvent</code></strong> 
+            </p>
+            <ul class="build">
+              <li>
+                Deprecated in
+                <a href="http://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents">DOM Events spec</a>
+              </li>
+              <li>
+                Adding listeners
+                <a href="http://www.oxymoronical.com/blog/2008/10/How-extensions-can-slow-down-Firefox-my-dirty-little-secret">degrades app performance</a>
+                by 1.5-7x!
+                <ul class="build">
+                  <li>slow because of event propagation and synchronous nature</li>
+                  <li>fire too often: every single change</li>
+                  <li>removing listener(s) doesn't reverse the damage</li>
+                </ul>
+              </li>
+              <li>
+                <a href="http://help.dottoro.com/ljfvvdnm.php#additionalEvents">Inconsistencies</a>
+                with browser implementations.
+              </li>
+            </ul>
+            <p class="red centered build topmargin" style="font-size:50px;">
+              <span>Don't use Mutation Events!</span>
+            </p>
+          </article>
+
+        </slide>
+
+        <slide>
+          <hgroup>
+            <span>
+              <a href="http://wiki.ecmascript.org/doku.php?id=harmony:observe" target="_blank" class="spec" title="Spec link"></a>
+            </span>
+            <h2>
+              <code>Object.observe()</code>
+            </h2>
+            <h3>watch changes to JS objects</h3>
+          </hgroup>
+          <article class="smaller">
+            <p class="centered" style="font-size:25px">
+              <span>
+                <code>Object.observe</code>
+                : JS objects ::
+                <code>MutationObserver</code>
+                : DOM
+              </span>
+            </p>
+
+            <pre class="prettyprint" data-lang="js">
+    function observeChanges(changes) {
+      console.log('== Callback ==');
+      changes.forEach(function(change) {
+        console.log('What Changed?', change.name);
+        console.log('How did it change?', change.type);
+        console.log('What was the old value?', change.oldValue );
+        console.log('What is the present value?', change.object[change.name]);
+      });
+    }
+
+    var o = {};
+    <b>Object.observe</b>(o, observeChanges);
+    // Object.unobserve(o, observeChanges); // Stop watching.
+    </pre>
+
+            <ul class="build">
+              <li>
+                Get notified when a property is added, deleted, or its value changes.
+              </li>
+              <li>
+                Get notified when properties are reconfigured (e.g.
+                <code>Object.freeze</code>
+                )
+              </li>
+              <li>
+                Landing in Chrome Canary. Turn on
+                <strong>Experimental JavaScript APIs</strong>
+                in
+                <code>about:flags</code>
+                .
+              </li>
+            </ul>
+            <p>
+              See
+              <a href="http://weblog.bocoup.com/javascript-object-observe/">Bocoup's writeup</a>
+              .
+            </p>
+          </article>
+
+        </slide>
+
+        <slide id="obj-observe-binding">
+          <hgroup>
+            <h2>Benefit: improved data binding</h2>
+            <h3></h3>
+          </hgroup>
+          <article >
+            <p>
+              The
+              <img src="images/angular.png" style="height:35px;vertical-align: middle;">
+              <a href="http://angularjs.org">AngularJS</a>
+              team experimented with a prototype build of Chromium:
+            </p>
+            <p class="fleft">
+              <img src="images/angularspeedup.png"></p>
+            <p class="fleft build">
+              <span>20-40x faster!</span>
+            </p>
+          </article>
         </slide>
 
 <slide>
-  
     <hgroup>
       <span>
-        
-        
-      </span>
-      <h2>Encapsulation</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><div class="build">
-
-<p><label class="good"></label> Fundamental foundation of OOP</p>
-
-<p><label class="good"></label> Separates code <em>you</em> wrote from the code that will <em>consume</em> it</p>
-
-<p><label class="bad"></label> We don't have it on the web!</p>
-
-<p><label class="sortof"></label> Well, sort of:</p>
-
-<h2 class="centered"><code>&lt;iframe&gt;</code></h2>
-
-<p class="topmargin"><label class="bad"></label> <code>&lt;iframe&gt;</code> are heavy and restrictive</p>
-
-</div></article>
- 
-</slide>
-
-<slide   >
-  
-    <hgroup>
-      <span>
-        
-        
-          <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html" target="_blank" class="spec" title="Spec link"></a>
+        <a href="http://mdv.googlecode.com/git/docs/design_intro.html" target="_blank" class="spec" title="Spec link"></a>
         
       </span>
-      <h2>Shadow DOM</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><p>Is complex! Let's cover the basics:</p>
-<ul>
-<li>Concept of Shadow DOM</li>
-<li>Creating Shadow DOM</li>
-<li>Insertion Points</li>
-<li>Styling<ul>
-<li>encapsulated styles &amp; shadow boundaries</li>
-<li>styling hooks: custom pseudo elements</li>
-<li><code>@host</code> at-rule</li>
-</ul>
-</li>
-</ul></article>
- 
-</slide>
-
-<slide   >
-  
-    <hgroup>
-      <span>
-        
-        
-      </span>
-      <h2>Turns out...</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><ul class="build">
-<li>DOM nodes can already "host" hidden DOM.</li>
-<li>It can't be accessed traversing the DOM.</li>
-</ul>
-<div class="build shadowvideo">
-<video controls height="300" src="http://www.ioncannon.net/examples/vp8-webm/big_buck_bunny_480p.webm"></video>
-<p style="float:left;margin-left: 1em;">
-<input type="date" style="zoom:2"><br>
-<input type="time" style="zoom:2">
-</p>
-</div>
-
-<p class="centered build" style="font-size:40px;"><span>So...browser vendor's have been holding out on us!</span></p></article>
- 
-</slide>
-
-<slide   >
-  
-    <hgroup>
-      <span>
-        
-        
-      </span>
-      <h2></h2>
-      <h3></h3>
-    </hgroup>
-    <article class="flexbox vcenter centered defintion"><h2 class="auto-fadein">Shadow DOM</h2>
-
-<h3 class="auto-fadein">exposes the same internals browser
-vendors have been using to implement their native controls, to us</h3></article>
- 
-</slide>
-
-<slide id="shadow-dom-host"  >
-  
-    <hgroup>
-      <span>
-        
-        
-          <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html" target="_blank" class="spec" title="Spec link"></a>
-        
-      </span>
-      <h2>Attaching Shadow DOM to a host</h2>
-      <h3></h3>
-    </hgroup>
-    <article class="flexbox vcenter centered"><p><img src="images/shadow-trees.svg" style="height: 100%;"></p></article>
- 
-</slide>
-
-<slide id="shadow-dom-render"  >
-  
-    <hgroup>
-      <span>
-        
-        
-          <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html" target="_blank" class="spec" title="Spec link"></a>
-        
-      </span>
-      <h2>Shadow tree is rendered instead</h2>
-      <h3></h3>
-    </hgroup>
-    <article class="flexbox vcenter centered"><p><img src="images/shadow-rendering.svg" style="height:100%;"></p>
-<div class="devtools" title="click me" alt="click me"></div></article>
- 
-</slide>
-
-<slide id="shadow-dom-creating"  >
-  
-    <hgroup>
-      <span>
-       
-          <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html#extensions-to-element" target="_blank" class="spec" title="Spec link"></a>
-        
-      </span>
-      <h2>Creating Shadow DOM</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><aside class="note">
-  <section>
-    <img src="images/shadow-rendering.svg" style="width: 100%;">
-  </section>
-</aside>
-
-<pre class="prettyprint" data-lang="html">
-&lt;div id="host">
-  &lt;h1>My Title&lt;/h1>
-  &lt;h2>My Subtitle&lt;/h2>
-  &lt;div>...other content...&lt;/div>
-&lt;/div>
-</pre>
-
-<pre class="prettyprint" data-lang="js">
-var host = document.querySelector('#host');
-<b>var shadow = host.<a data-tooltip-property="createShadowRoot" data-tooltip-support='["webkit"]' data-tooltip-js>createShadowRoot</a>();</b>
-<b>shadow.innerHTML = '&lt;h2>Yo, you got replaced!&lt;/h2>' +
-                   '&lt;div>by my awesome content&lt;/div>';</b>
-// <b>host.<a data-tooltip-property="shadowRoot" data-tooltip-support='["webkit"]' data-tooltip-js data-tooltip-js-property>shadowRoot</a>;</b>
-</pre>
-
-<div class="host">
-  <h1>My Title</h1>
-  <h2>My Subtitle</h2>
-  <div>...other content...</div>
-</div>
-
-<script>
-(function() {
-var shadow = document.querySelector('#shadow-dom-creating .host').createShadowRoot();
-shadow.innerHTML = '<h2>Yo, you got replaced!</h2>' +
-                   '<div>by my awesome content</div>';
-})();
-</script>
-</article>
- </slide>
-
-<slide id="shadow-dom-style-encapsulation"  >
-  
-    <hgroup>
-      <span>
-        
-        
-      </span>
-      <h2>Style encapsulation</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><aside class="note">
-  <section>
-    <img src="images/shadow-rendering.svg" style="width: 100%;">
-  </section>
-</aside>
-
-<p><code>&lt;style&gt;</code>s defined in <code>ShadowRoot</code> are scoped.</p>
-<pre class="prettyprint" data-lang="js">
-var shadow = document.querySelector('#host').<a data-tooltip-property="createShadowRoot" data-tooltip-support='["webkit"]' data-tooltip-js>createShadowRoot</a>();
-shadow.innerHTML = '<b>&lt;style>h2 { color: red; }&lt;/style></b>' + 
-                   '&lt;h2>Yo, you got replaced!&lt;/h2>' + 
-                   '&lt;div>by my awesome content&lt;/div>';
-</pre>
-
-<div class="host">
-  <h1>My Title</h1>
-  <h2>My Subtitle</h2>
-  <div>...other content...</div>
-</div>
-
-<script>
-(function() {
-var shadow = document.querySelector('#shadow-dom-style-encapsulation .host').createShadowRoot();
-shadow.innerHTML = '<style>h2 { color: red;}</style>' + 
-                   '<h2>Yo, you got replaced!</h2>' + 
-                   '<div>by my awesome content</div>';
-
-})();
-</script></article>
- 
-</slide>
-
-<slide id="shadow-host-at"  >
-  
-    <hgroup>
-      <span>
-        
-        
-          <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html#host-at-rule" target="_blank" class="spec" title="Spec link"></a>
-        
-      </span>
-      <h2>Styling the host element (<code>@host</code> at-rule)</h2>
-      <h3></h3>
-    </hgroup>
-    <article class="smaller"><ul>
-<li><code>@host</code> selects the shadow host element.</li>
-<li>Allows reacting to different states:</li>
-</ul>
-<pre class="prettyprint" data-lang="css">
-&lt;style>
-<b>@host</b> {
-  /* Gotcha: higher specificity than any selector,
-     lower specificity than declarations from a &lt;style&gt; attribute. */
-  * {
-    opacity: 0.2;
-    <a data-tooltip-property="transition" data-tooltip-support='["webkit", "moz", "ms", "o", "unprefixed"]'>transition</a>: opacity 400ms ease-in-out;
-  }
-  *:hover {
-    opacity: 1;
-  }
-}
-&lt;/style>
-</pre>
-
-<div class="host">
-  <h1>My Title</h1>
-  <h2>My Subtitle</h2>
-  <div>...other content...</div>
-</div>
-
-<script>
-(function() {
-var shadow = document.querySelector('#shadow-host-at .host').createShadowRoot();
-shadow.innerHTML = '<style>h2 { color: red;}' +
-'@host {\
-  * {\
-    opacity: 0.2;\
-    -webkit-transition: opacity 400ms ease-in-out;\
-  }\
-  *:hover {\
-    opacity: 1;\
-  }\
-}</style>' + 
-'<h2>Yo, you got replaced!</h2>' + 
-'<div>by my awesome content</div>';
-
-})();
-</script></article>
- 
-</slide>
-
-
-<slide   >
-  
-    <hgroup>
-      <span>
-        
-        
-      </span>
-      <h2>Remember our host node</h2>
+      <h2><img src="images/clock.png" title="Soon" alt="clock that show the near future">End Game: Model Driven Views (MDV)</h2>
       <h3></h3>
     </hgroup>
     <article ><pre class="prettyprint" data-lang="html">
-&lt;div id="host">
-  &lt;h1>My Title&lt;/h1>
-  &lt;h2>My Subtitle&lt;/h2>
-  &lt;div>...other content...&lt;/div>
+&lt;div id="example">
+&lt;ul>
+  <b>&lt;template iterate>
+    &lt;li>{{ name }}
+      &lt;ul>&lt;template iterate="skills">&lt;li>...&lt;/li>&lt;/template>&lt;/ul>
+    &lt;/li>
+  &lt;/template></b>
+&lt;/ul>
 &lt;/div>
+&lt;script>
+document.querySelector('#example')<b>.model</b> = [
+  {name: 'Sally', skills: ['carpentry']}, 
+  {name: 'Helen', skills: ['weaving', 'omnipotence']}
+];
+&lt;/script>
 </pre>
 
-<p>that guy rendered as:</p>
+<p>Test it today: <a href="https://code.google.com/p/mdv/">code.google.com/p/mdv/</a></p></article>
+ 
+</slide>
+
+<slide>
+    <hgroup>
+      <h2><img src="images/calendar.png" alt="Today" title="Today"> Templating in <img src="images/angular.png"> AngularJS</h2>
+      <h3></h3>
+    </hgroup>
+    <article class="smaller"><p>A (close-ish) taste of the future:</p>
 <pre class="prettyprint" data-lang="html">
-&lt;div id="host">
-  <span style="opacity:0.5">#shadow-root</span>
-    &lt;style>h2 {color: red;}&lt;/style>
-    &lt;h2>Yo, you got replaced!&lt;/h2>
-    &lt;div>by my awesome content&lt;/div>
+&lt;div <b>ng-controller="AppController"</b>>
+  &lt;ul>
+    &lt;li <b>ng-repeat="person in model"</b>>{{ person.name }}
+    &lt;ul>&lt;li <b>ng-repeat="skill in person.skills"</b>>{{skill}}&lt;/li>&lt;/ul>
+  &lt;/ul>
 &lt;/div>
+&lt;script>
+function AppController($scope) {
+  $scope.model = [{name: 'Sally', skills: ['carpentry']},
+                  {name: 'Helen', skills: ['weaving', 'omnipotence']}];
+}
+&lt;/script>
 </pre>
 
-<p>...everything was replaced when we attached the shadow DOM <label class="bad"></label></p></article>
- 
-</slide>
-
-<slide id="insertion-points2"  >
-  
-    <hgroup>
-      <span>
-        
-        
-      </span>
-      <h2>Shadow DOM insertion points</h2>
-      <h3>funnels for host's children</h3>
-    </hgroup>
-    <article class="flexbox vcenter centered build"><div class="auto-fadein"></div></article>
- 
-</slide>
-
-<slide id="shadow-dom-insertion-pts-example"  >
-  
-    <hgroup>
-      <span>
-        
-        
-      </span>
-      <h2>Shadow DOM insertion points</h2>
-      <h3>funnels for host's children</h3>
-    </hgroup>
-    <article class="smaller"><ul>
-<li><code>&lt;content&gt;</code> elements are insertion points.</li>
-<li><code>select</code> attribute uses CSS selectors to specify where children are funneled.</li>
-<li><code>content.getDistributedNodes()</code> returns list of element distributed in the insertion point.</li>
-</ul>
-<div class="columns-2">
-<pre class="prettyprint" data-lang="host">
-&lt;div id="host"&gt;
-  &lt;h1&gt;My Title&lt;/h1&gt;
-  &lt;h2&gt;My Subtitle&lt;/h2&gt;
-  &lt;div&gt;...other content...&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="prettyprint" data-lang="Shadow DOM" style="-webkit-column-break-before: always;">
-&lt;style>
-  h2 {color: red;}
-&lt;/style>
-&lt;hgroup>
-  <b>&lt;content select="h2">&lt;/content&gt;</b>
-  &lt;div&gt;You got enhanced&lt;/div&gt;
-  <b>&lt;content select="h1:first-child">&lt;/content&gt;</b>
-&lt;/hgroup>
-<b>&lt;content select="*">&lt;/content&gt;</b>
-</pre>
-</div>
-
-<div class="host">
-  <h1>My Title</h1>
-  <h2>My Subtitle</h2>
-  <div>...other content...</div>
+<div ng-app ng-controller="AppController" class="angular-template-example">
+<ol>
+  <li ng-repeat="person in model">{{ person.name }}
+  <ul><li ng-repeat="skill in person.skills">{{skill}}</li></ul>
+</ol>
 </div>
 
 <script>
-(function() {
-var shadow = document.querySelector('#shadow-dom-insertion-pts-example .host').createShadowRoot();
-shadow.innerHTML = '<style>\
-h2 { color: red;}\
-</style>\
-<hgroup>\
-  <content select="h2"></content>\
-  <div>You got enhanced</div>\
-  <content select="h1:first-child"></content>\
-</hgroup>\
-<content select="*"></content>';
-})();
-</script></article>
+function AppController($scope) {
+  console.log("we are in angular magic controler");
+  $scope.model = [
+    {name: 'Sally', skills: ['carpentry']},
+    {name: 'Helen', skills: ['weaving', 'omnipotence']}
+  ];
+}
+</script>
+</article>
  
 </slide>
 
-  <slide class="nobackground funnyimage" style="background-image: url(images/insert-point-sun.png)">
-     Insertion Points
-      <article class="flexbox vcenter centered defintion">
-       
-        <p style="color: #F1D6D6;">allow us to define a declarative API</p>
-      </article>
-  </slide>
+<slide  class="segue nobackground highlight fill" style="background-image: url(images/istock-lasanga.jpg)">
+    <aside class="gdbar"><img src="images/chrome_logo.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Custom Elements</h2>
+      <h3>Putting it all together</h3>
+    </hgroup>
+</slide>
 
 <slide>
+    <hgroup>
+      <h2><img src="images/calendar.png" alt="Today" title="Today"> Creating a "basic" tab control (YUI 3)</h2>
+      <h3></h3>
+    </hgroup>
+    <article class="smaller"><div class="columns-2">
+<pre class="prettyprint" data-lang="html" class="columns-2">
+&lt;div id=&quot;demo&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#foo&quot;&gt;foo&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#bar&quot;&gt;bar&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div&gt;
+    &lt;div id=&quot;foo&quot;&gt;&lt;p&gt;foo content&lt;/p&gt;&lt;/div&gt;
+    &lt;div id=&quot;bar&quot;&gt;&lt;p&gt;bar content&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<pre class="prettyprint" data-lang="js">
+YUI().use('tabview', function(Y) {
+  var tabview = new Y.TabView({srcNode: '#demo'});
+  tabview.render();
+});
+</pre>
+<img src="images/yui_tab.png">
+</div>
+
+<footer class="source"><a href="http://yuilibrary.com/yui/docs/tabview/tabview-basic.html">YUI documentation</a></footer></article>
+ 
+</slide>
+
+<slide>
+    <hgroup>
+      <span>
+     
+      </span>
+      <h2>Do we have all the pieces to build components?</h2>
+      <h3></h3>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Templates (<code>&lt;template&gt;</code>)</li>
+        <li>Shadow DOM (<code>@host</code>, custom pseudo elements, styling hooks)</li>
+        <li>Mutation Observers, <code>Object.observe()</code></li>
+      </ul>
+      <p class="centered build topmargin blue"><span style="font-size:50px;">WE DO :)</span></p></article>
+</slide>
+
+<slide   >
+    <hgroup>
+      <span>
+        
+        
+          <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html#declaring-custom-elements" target="_blank" class="spec" title="Spec link"></a>
+        
+      </span>
+      <h2>Creating custom elements</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p>Define a <em>declarative</em> "API" using insertion points:</p>
+<pre class="prettyprint" data-lang="x-tabs.html">
+<b>&lt;element name="x-tabs"></b>
+  &lt;template>
+    &lt;style>...&lt;/style>
+    &lt;content select="hgroup:first-child">&lt;/content>
+  &lt;/template>
+<b>&lt;/element></b>
+</pre>
+
+<p>Include and use it:</p>
+<pre class="prettyprint" data-lang="yourapp.html">
+&lt;link <b>rel="components"</b> href="x-tabs.html"&gt;
+&lt;x-tabs>
+  &lt;hgroup>
+    &lt;h2>Title&lt;/h2>
+    ...
+  &lt;/hgroup>
+&lt;/x-tabs>
+</pre></article>
+ 
+</slide>
+
+<slide   >
+  
+    <hgroup>
+      <span>
+        
+        
+          <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html#declaring-custom-elements" target="_blank" class="spec" title="Spec link"></a>
+        
+      </span>
+      <h2>Define an API</h2>
+      <h3></h3>
+    </hgroup>
+    <article class="smaller"><p>Define an <em>imperative</em> API:</p>
+<pre class="prettyprint" data-lang="x-tabs.html">
+&lt;element name="x-tabs" <b>constructor="TabsController"></b>
+  &lt;template>...&lt;/template>
+  <b>&lt;script&gt;
+    TabsController.prototype = {
+      doSomething: function() { ... }
+    };
+  &lt;/script&gt;</b>
+&lt;/element>
+</pre>
+
+<p>Declared <code>constructor</code> goes on global scope:</p>
+<pre class="prettyprint" data-lang="yourapp.html">
+&lt;link rel="components" href="x-tabs.html"&gt;
+&lt;script&gt;
+<b>var tabs = new TabsController();</b>
+tabs.addEventListener('click', function(e) { <b>e.target.doSomething();</b>});
+document.body.appendChild(tabs);
+&lt;/script&gt;
+</pre></article>
+ 
+</slide>
+
+<slide   >
   
     <hgroup>
       <span>
         
         
       </span>
-      <h2></h2>
+      <h2>Or, extend existing [custom] elements</h2>
       <h3></h3>
     </hgroup>
-    <article class="flexbox vcenter centered"><h2 class="auto-fadein">Encapsulation / Boundaries / Re-usability</h2>
+    <article ><pre class="prettyprint" data-lang="x-megabutton.html">
+&lt;element name="x-megabutton" <b>extends="button"</b> <b>constructor="MegaButton"</b>>
+  &lt;template>
+    &lt;button>&lt;content>&lt;/content>&lt;/button>
+  &lt;/template>
+  &lt;script>
+    MegaButton.prototype = {
+      megaClick: function(e) {
+        alert('BOOM!');
+      }
+    };
+  &lt;/script>
+&lt;/element>
+</pre>
 
-<h3 class="auto-fadein">baked into the web platform...</h3></article>
+<p>Use it:</p>
+<pre class="prettyprint" data-lang="yourapp.html">
+&lt;link rel="components" href="x-megabutton.html">
+&lt;x-megabutton>Mega button&lt;/x-megabutton>
+</pre></article>
+ 
+</slide>
+
+<slide id="tab-component-example">
+    <hgroup>
+      <span> </span>
+      <h2>Example: tab component</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><div class="columns-2">
+<h3>Web Components <img src="images/webcomponents.png"></h3>
+<pre class="prettyprint" data-lang="html">
+&lt;x-tab&gt;
+  &lt;h2&gt;One&lt;/h2&gt;
+  &lt;section&gt;
+    Code to instantiate this component:
+    &lt;pre&gt;&lt;/pre&gt;
+  &lt;/section&gt;
+  &lt;h2&gt;Two is bigger than three&lt;/h2&gt;
+  &lt;section&gt;
+    Second panel hotness
+  &lt;/section&gt;
+&lt;/x-tab&gt;
+</pre>
+
+<h3 style="-webkit-column-break-before: always;"><img src="images/angular.png"> AngularJS</h3>
+<pre class="prettyprint" data-lang="html">
+&lt;tabs ng-app=&quot;tabs&quot;&gt;
+  &lt;pane title=&quot;One&quot;&gt;
+    Code to instantiate this component:
+    &lt;pre&gt;&lt;/pre&gt;
+  &lt;/pane&gt;
+  &lt;pane title=&quot;Two is bigger than three&quot;&gt;
+    Second panel hotness.
+  &lt;/pane&gt;
+&lt;/tabs&gt;
+</pre>
+</div>
+
+<p class="centered"><a href="http://html5-demos.appspot.com/static/webcomponents/demos/components/tabs/index.html" class="demo">DEMO</a></p></article>
  
 </slide>
 
@@ -2291,7 +2937,6 @@ h2 { color: red;}\
             <a href="http://bit.ly/devtools-tips">bit.ly/devtools-tips</a>
           </article>
         </slide>
-
 
         <!-- Final words of wisdom -->
         <slide id="wrapup">
@@ -2343,13 +2988,12 @@ h2 { color: red;}\
         </slide>
 
         <slide class="backdrop"></slide>
-
       </slides>
 
       <!--
 <script src="js/app.js"></script>
     -->
-    <script src="js/angular-1.0.0.min.js" async></script>
+    <script src="js/angular-1.0.3.min.js" async></script>
 
     <script>
 var _gaq = _gaq || [];

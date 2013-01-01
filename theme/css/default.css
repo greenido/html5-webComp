@@ -1999,7 +1999,7 @@ label.bad {
   background-color: #E0543E;
 }
 label.good {
-background-color: #00A86D;
+  background-color: #00A86D;
 }
 
 .host {
@@ -2008,4 +2008,36 @@ background-color: #00A86D;
   padding-bottom: 15px;
   position: relative;
   bottom: 2em;
+}
+slide#insertionpoint.current article.auto-fadein {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.highlight hgroup h2, .highlight hgroup h3 {
+  text-shadow: 0 0 40px white,0 0 40px white,0 0 0px white,0 0 40px white,0 0 40px white;
+  -webkit-filter: drop-shadow(0 0 15px #fff);
+  -o-filter: drop-shadow(0 0 15px #fff);
+  -moz-filter: drop-shadow(0 0 15px #fff);
+  -ms-filter: drop-shadow(0 0 15px #fff);
+  filter: drop-shadow(0 0 15px #fff);
+  color: black;
+}
+
+#obj-observe-binding p:last-of-type {
+margin-top: 15%;
+font-weight: 600;
+font-size: 40px;
+color: #0DA861;
+}
+
+#obj-observe-binding p.fleft {
+float: left;
+margin-right: 20px;
+}
+
+slides>slide hgroup h2 img, slides>slide hgroup h3 img {
+  height: 35px;
+}
+#tab-component-example article h3 img {
+  height: 35px;
 }
