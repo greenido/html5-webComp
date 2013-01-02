@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Spinner Web Component Example</title>
+    <style type="text/css">
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            font-size: 35px;
+            color: #666;
+        }
+
+        #content {
+            width: 400px;
+            text-align: center;
+            margin: auto;
+            margin-top:200px;
+        }
+
+        #spinner {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            margin: auto;
+        }
+
+        .bar {
+            position: absolute;
+            width: 12%;
+            height: 26%;
+            background: #aaa;
+            left: 44.5%;
+            top: 37%;
+            opactiy: 1;
+            -webkit-border-radius: 50px;
+            -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+            -webkit-animation: fade 1s linear infinite;
+            -webkit-transition: opacity .25s ease-in;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: 1;
+            } to {
+                opacity: 0.25;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div id="content">
+    <p>Please Enjoy This Spinner While You Wait</p>
+    <div id="spinner">
+        <div class="bar" style="-webkit-transform:rotate(30deg) translate(0, -142%);-webkit-animation-delay:-0.08333333333333333s"></div>
+        <div class="bar" style="-webkit-transform:rotate(60deg) translate(0, -142%);-webkit-animation-delay:-0.16666666666666666s"></div>
+        <div class="bar" style="-webkit-transform:rotate(90deg) translate(0, -142%);-webkit-animation-delay:-0.25s"></div>
+        <div class="bar" style="-webkit-transform:rotate(120deg) translate(0, -142%);-webkit-animation-delay:-0.3333333333333333s"></div>
+        <div class="bar" style="-webkit-transform:rotate(150deg) translate(0, -142%);-webkit-animation-delay:-0.41666666666666663s"></div>
+        <div class="bar" style="-webkit-transform:rotate(180deg) translate(0, -142%);-webkit-animation-delay:-0.49999999999999994s"></div>
+        <div class="bar" style="-webkit-transform:rotate(210deg) translate(0, -142%);-webkit-animation-delay:-0.5833333333333333s"></div>
+        <div class="bar" style="-webkit-transform:rotate(240deg) translate(0, -142%);-webkit-animation-delay:-0.6666666666666666s"></div>
+        <div class="bar" style="-webkit-transform:rotate(270deg) translate(0, -142%);-webkit-animation-delay:-0.75s"></div>
+        <div class="bar" style="-webkit-transform:rotate(300deg) translate(0, -142%);-webkit-animation-delay:-0.8333333333333334s"></div>
+        <div class="bar" style="-webkit-transform:rotate(330deg) translate(0, -142%);-webkit-animation-delay:-0.9166666666666667s"></div>
+        <div class="bar" style="-webkit-transform:rotate(360deg) translate(0, -142%);-webkit-animation-delay:-1s"></div>
+    </div>
+</div>
+
+</body>
+</html>
