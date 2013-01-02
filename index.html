@@ -1520,19 +1520,16 @@ socket.onmessage = function(e) {
                 <img src="images/cf-logo.png" 
           class="centered quimby_search_image" style="height:250px">
                 <p>Meta tag:</p>
-                <pre class="prettyprint">
-        &lt;meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-      </pre>
-
+                <pre class="prettyprint">&lt;meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+                </pre>
                 <p>Header:</p>
                 <pre class="prettyprint">X-UA-Compatible: IE=Edge,chrome=1</pre>
-
               </article>
             </slide>
 
             <slide>
               <hgroup>
-                <h2>More *Bold* Audio Demos</h2>
+                <h2>*Bold* Audio Demos</h2>
               </hgroup>
               <article>
                 <ul>
@@ -1564,8 +1561,17 @@ socket.onmessage = function(e) {
               </article>
             </slide>
 
-            <!-- @@@ Web Components fun -->
+            <slide id="wrapup">
+              <hgroup>
+                <h2>The Web Can Do Amazing Things...</h2>
+              </hgroup>
+              <article>
+                <ul></ul>
+                <!-- dynamically filled --> </article>
+                <span class='juststart'>But it is just the beginning!</span>
+            </slide>
 
+            <!-- @@@ Web Components fun -->
             <slide>
               <article class="flexbox vcenter centered">
                 <h2 class="auto-fadein">Web components?!</h2>
@@ -1577,12 +1583,12 @@ socket.onmessage = function(e) {
 
               <hgroup>
                 <span></span>
-                <h2>To view the demos in this presentation</h2>
+                <h2>Wanna view cool demos?</h2>
                 <h3></h3>
               </hgroup>
               <article >
                 <ol>
-                  <li>Use Chrome Canary</li>
+                  <li>Use <a href="https://www.google.com/intl/en/chrome/browser/canary.html">Chrome Canary</a></li>
                   <li>
                     Enable yourself:
                     <ul>
@@ -2331,12 +2337,10 @@ vendors have been using to implement their native controls, to us
         &lt;h2>Yo, you got replaced!&lt;/h2>
         &lt;div>by my awesome content&lt;/div>
     &lt;/div>
+     <label class="bad"></label>...everything was replaced when we attached the shadow DOM
     </pre>
-
-              <p>
-                ...everything was replaced when we attached the shadow DOM
-                <label class="bad"></label>
-              </p>
+                
+              
             </article>
 
           </slide>
@@ -2579,11 +2583,11 @@ vendors have been using to implement their native controls, to us
               <a href="http://wiki.ecmascript.org/doku.php?id=harmony:observe" target="_blank" class="spec" title="Spec link"></a>
             </span>
             <h2>
-              <code>Object.observe()</code>
+              Object.observe()
             </h2>
             <h3>watch changes to JS objects</h3>
           </hgroup>
-          <article class="smaller">
+          <article class="smaller" style="margin-top: 2px;">
             <p class="centered" style="font-size:25px">
               <span>
                 <code>Object.observe</code>
@@ -2603,10 +2607,10 @@ vendors have been using to implement their native controls, to us
         console.log('What is the present value?', change.object[change.name]);
       });
     }
-
     var o = {};
     <b>Object.observe</b>(o, observeChanges);
     // Object.unobserve(o, observeChanges); // Stop watching.
+    //  See <a href="http://weblog.bocoup.com/javascript-object-observe/">Bocoup's writeup</a>
     </pre>
 
             <ul class="build">
@@ -2623,16 +2627,9 @@ vendors have been using to implement their native controls, to us
                 <strong>Experimental JavaScript APIs</strong>
                 in
                 <code>about:flags</code>
-                .
               </li>
             </ul>
-            <p>
-              See
-              <a href="http://weblog.bocoup.com/javascript-object-observe/">Bocoup's writeup</a>
-              .
-            </p>
           </article>
-
         </slide>
 
         <slide id="obj-observe-binding">
@@ -2717,18 +2714,18 @@ function AppController($scope) {
 &lt;/script>
 </pre>
 
-            <div ng-app ng-controller="AppController" class="angular-template-example">
-              <ol>
-                <li ng-repeat="person in model">
-                  {{ person.name }}
-                  <ul>
-                    <li ng-repeat="skill in person.skills">{{skill}}</li>
-                  </ul>
-                </ol>
-              </div>
+        <div ng-app ng-controller="demoController" class="angular-template-example">
+          <ol>
+            <li ng-repeat="person in model">
+            {{person.name}}
+              <ul>
+                <li ng-repeat="skill in person.skills">{{skill}}</li>
+              </ul>
+              </ol>
+        </div>
 
-              <script>
-function AppController($scope) {
+<script>
+function demoController($scope) {
   console.log("we are in angular magic controler");
   $scope.model = [
     {name: 'Sally', skills: ['carpentry']},
@@ -3107,7 +3104,7 @@ document.body.appendChild(tabs);
 
           </slide>
 
-          <!-- ### devtools -->
+          <!-- ### devtools 
           <slide class="segue">
             <article class="flexbox vcenter auto-fadein">
               <h2 class="black">
@@ -3116,18 +3113,9 @@ document.body.appendChild(tabs);
               <img src="https://developers.google.com/chrome-developer-tools/images/slide1.jpg" alt="chrome dev tools" style="width: 750px;padding: 45px;">
               <a href="http://bit.ly/devtools-tips">bit.ly/devtools-tips</a>
             </article>
-          </slide>
+          </slide> -->
 
           <!-- Final words of wisdom -->
-          <slide id="wrapup">
-            <hgroup>
-              <h2>The Web Can Do Amazing Things...</h2>
-            </hgroup>
-            <article>
-              <ul></ul>
-              <!-- dynamically filled --> </article>
-          </slide>
-
           <slide class="nobackground">
             <article class="flexbox vcenter" id="chrome-heart">
               <div class="chrome-logo spin"></div>
@@ -3147,7 +3135,7 @@ document.body.appendChild(tabs);
               <h2>&lt; Thank You! &gt;</h2>
               <p>
                 Source:
-                <a href="https://github.com/greenido/html5can" class="white" style="border:none">github.com/greenido/html5can</a>
+                <a href="https://github.com/greenido/html5can" class="white" style="border:none">github.com/greenido/</a>
               </p>
             </article>
             <p class="auto-fadein" data-config-contact>
